@@ -1,24 +1,38 @@
 import React, { useState } from 'react'
 import { ChevronDown, Phone, Menu, X } from 'lucide-react'
 import { Button } from '../ui/Button'
+import { FeaturesCascadeDropdown } from './FeaturesCascadeDropdown'
+import { SolutionsCascadeDropdown } from './SolutionsCascadeDropdown'
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [featuresOpen, setFeaturesOpen] = useState(false)
+  const [solutionsOpen, setSolutionsOpen] = useState(false)
 
   const navItems = [
-    { label: 'Features', hasDropdown: true },
-    { label: 'Solutions', hasDropdown: true },
-    { label: 'Pricing', hasDropdown: false },
-    { label: 'Customers', hasDropdown: false },
-    { label: 'Partners', hasDropdown: true },
-    { label: 'Resources', hasDropdown: true },
+    { label: 'Features', hasDropdown: true, key: 'features' },
+    { label: 'Solutions', hasDropdown: true, key: 'solutions' },
+    { label: 'Pricing', hasDropdown: false, key: 'pricing' },
+    { label: 'Customers', hasDropdown: false, key: 'customers' },
+    { label: 'Partners', hasDropdown: true, key: 'partners' },
+    { label: 'Resources', hasDropdown: true, key: 'resources' },
   ]
+
+  const handleNavClick = (key) => {
+    if (key === 'features') {
+      setFeaturesOpen(!featuresOpen)
+      setSolutionsOpen(false)
+    } else if (key === 'solutions') {
+      setSolutionsOpen(!solutionsOpen)
+      setFeaturesOpen(false)
+    }
+  }
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-xs">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 flex items-center justify-between">
         
-        {/* Larger Centered Vertical Stack Logo */}
+        {/* Centered Vertical Stack Logo */}
         <a href="#" className="flex flex-col items-center group py-1 text-center select-none">
           <img 
             src="/images/logo.png" 
@@ -36,15 +50,62 @@ export function Navbar() {
         </a>
 
         {/* Desktop Nav Links */}
-        <nav className="hidden lg:flex items-center gap-7">
-          {navItems.map((item, index) => (
-            <div key={index} className="relative group">
-              <button className="flex items-center gap-1 text-sm font-semibold text-slate-600 hover:text-[#00A896] py-2 transition-colors cursor-pointer">
-                <span>{item.label}</span>
-                {item.hasDropdown && <ChevronDown className="w-3.5 h-3.5 text-slate-400 group-hover:text-[#00A896] transition-transform group-hover:rotate-180" />}
-              </button>
-            </div>
-          ))}
+        <nav className="hidden lg:flex items-center gap-7 relative">
+          {navItems.map((item, index) => {
+            const isFeatures = item.key === 'features'
+            const isSolutions = item.key === 'solutions'
+            const isOpen = (isFeatures && featuresOpen) || (isSolutions && solutionsOpen)
+
+            return (
+              <div 
+                key={index} 
+                className="relative"
+                onMouseEnter={() => {
+                  if (isFeatures) {
+                    setFeaturesOpen(true)
+                    setSolutionsOpen(false)
+                  } else if (isSolutions) {
+                    setSolutionsOpen(true)
+                    setFeaturesOpen(false)
+                  }
+                }}
+              >
+                <button 
+                  onClick={() => handleNavClick(item.key)}
+                  className={`flex items-center gap-1.5 text-sm font-semibold py-2 transition-colors cursor-pointer ${
+                    isOpen 
+                      ? 'text-[#00A896]' 
+                      : 'text-slate-600 hover:text-[#00A896]'
+                  }`}
+                >
+                  <span>{item.label}</span>
+                  {item.hasDropdown && (
+                    <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${
+                      isOpen 
+                        ? 'rotate-180 text-[#00A896]' 
+                        : 'text-slate-400 group-hover:text-[#00A896]'
+                    }`} />
+                  )}
+                </button>
+
+                {/* Features Flyout Dropdown */}
+                {isFeatures && (
+                  <FeaturesCascadeDropdown 
+                    isOpen={featuresOpen} 
+                    onClose={() => setFeaturesOpen(false)} 
+                  />
+                )}
+
+                {/* Solutions Flyout Dropdown */}
+                {isSolutions && (
+                  <SolutionsCascadeDropdown 
+                    isOpen={solutionsOpen} 
+                    onClose={() => setSolutionsOpen(false)} 
+                  />
+                )}
+              </div>
+            )
+          })}
         </nav>
 
         {/* Desktop Right Action Area */}
@@ -81,6 +142,10 @@ export function Navbar() {
               <a 
                 key={index}
                 href="#"
+                onClick={() => {
+                  if (item.key === 'features') setFeaturesOpen(!featuresOpen)
+                  if (item.key === 'solutions') setSolutionsOpen(!solutionsOpen)
+                }}
                 className="flex items-center justify-between text-base font-semibold text-slate-700 py-2 border-b border-slate-100"
               >
                 <span>{item.label}</span>
