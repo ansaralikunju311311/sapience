@@ -2,27 +2,36 @@
 
 @theme {
   --font-sans: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --color-brand-teal: #00A896;
+  --color-brand-teal-hover: #00887A;
+  --color-brand-orange: #F95738;
+  --color-brand-orange-hover: #E04426;
+  --color-brand-dark: #032B26;
 }
 
 @layer base {
   body {
     font-family: var(--font-sans);
-    background-color: #030712;
-    color: #f8fafc;
+    background-color: #ffffff;
+    color: #0f172a;
+    -webkit-font-smoothing: antialiased;
   }
 }
 
-/* Custom subtle scrollbar & glassmorphism utilities */
-::-webkit-scrollbar {
-  width: 8px;
+/* Custom Utilities */
+.shadow-soft {
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05), 0 4px 12px -2px rgba(0, 0, 0, 0.03);
 }
-::-webkit-scrollbar-track {
-  background: #090d16;
+
+.shadow-card {
+  box-shadow: 0 20px 40px -15px rgba(0, 168, 150, 0.1), 0 0 1px 1px rgba(0, 0, 0, 0.05);
 }
-::-webkit-scrollbar-thumb {
-  background: #1e293b;
-  border-radius: 4px;
+
+.bg-ai-dark {
+  background-color: #032b26;
 }
-::-webkit-scrollbar-thumb:hover {
-  background: #334155;
+
+/* Smooth transitions */
+.transition-all-200 {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
