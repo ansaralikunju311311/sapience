@@ -22,7 +22,12 @@ export function Footer({ onNavigate }) {
   ]
 
   const handleLinkClick = (e, linkName) => {
-    if (linkName === 'Customer stories' || linkName === 'Enterprise') {
+    if (linkName === 'Pricing') {
+      e.preventDefault()
+      if (onNavigate) {
+        onNavigate('pricing')
+      }
+    } else if (linkName === 'Customer stories' || linkName === 'Enterprise') {
       e.preventDefault()
       if (onNavigate) {
         onNavigate('customers')
@@ -86,7 +91,7 @@ export function Footer({ onNavigate }) {
                       <a 
                         href="#" 
                         onClick={(e) => handleLinkClick(e, link)}
-                        className="text-xs text-slate-600 hover:text-[#00A896] transition-colors"
+                        className="text-xs text-slate-600 hover:text-[#00A896] transition-colors cursor-pointer"
                       >
                         {link}
                       </a>

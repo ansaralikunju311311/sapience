@@ -29,6 +29,13 @@ export function Navbar({ onNavigate }) {
       setSolutionsOpen(!solutionsOpen)
       setFeaturesOpen(false)
       setCustomersOpen(false)
+    } else if (key === 'pricing') {
+      setCustomersOpen(false)
+      setFeaturesOpen(false)
+      setSolutionsOpen(false)
+      if (onNavigate) {
+        onNavigate('pricing')
+      }
     } else if (key === 'customers') {
       setCustomersOpen(false)
       setFeaturesOpen(false)
@@ -179,10 +186,15 @@ export function Navbar({ onNavigate }) {
             {navItems.map((item, index) => (
               <a 
                 key={index}
-                href={item.key === 'customers' ? '#customers-page' : '#'}
+                href={item.key === 'customers' ? '#customers-page' : item.key === 'pricing' ? '#pricing-page' : '#'}
                 onClick={(e) => {
                   if (item.key === 'features') setFeaturesOpen(!featuresOpen)
                   if (item.key === 'solutions') setSolutionsOpen(!solutionsOpen)
+                  if (item.key === 'pricing') {
+                    e.preventDefault()
+                    setMobileMenuOpen(false)
+                    if (onNavigate) onNavigate('pricing')
+                  }
                   if (item.key === 'customers') {
                     e.preventDefault()
                     setMobileMenuOpen(false)
