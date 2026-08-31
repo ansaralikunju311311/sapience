@@ -3,17 +3,19 @@ import { ChevronDown, Phone, Menu, X } from 'lucide-react'
 import { Button } from '../ui/Button'
 import { FeaturesCascadeDropdown } from './FeaturesCascadeDropdown'
 import { SolutionsCascadeDropdown } from './SolutionsCascadeDropdown'
+import { CustomersCascadeDropdown } from './CustomersCascadeDropdown'
 
-export function Navbar() {
+export function Navbar({ onNavigate }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [featuresOpen, setFeaturesOpen] = useState(false)
   const [solutionsOpen, setSolutionsOpen] = useState(false)
+  const [customersOpen, setCustomersOpen] = useState(false)
 
   const navItems = [
     { label: 'Features', hasDropdown: true, key: 'features' },
     { label: 'Solutions', hasDropdown: true, key: 'solutions' },
     { label: 'Pricing', hasDropdown: false, key: 'pricing' },
-    { label: 'Customers', hasDropdown: false, key: 'customers' },
+    { label: 'Customers', hasDropdown: true, key: 'customers' },
     { label: 'Partners', hasDropdown: true, key: 'partners' },
     { label: 'Resources', hasDropdown: true, key: 'resources' },
   ]
@@ -22,9 +24,25 @@ export function Navbar() {
     if (key === 'features') {
       setFeaturesOpen(!featuresOpen)
       setSolutionsOpen(false)
+      setCustomersOpen(false)
     } else if (key === 'solutions') {
       setSolutionsOpen(!solutionsOpen)
       setFeaturesOpen(false)
+      setCustomersOpen(false)
+    } else if (key === 'customers') {
+      setCustomersOpen(false)
+      setFeaturesOpen(false)
+      setSolutionsOpen(false)
+      if (onNavigate) {
+        onNavigate('customers')
+      }
+    }
+  }
+
+  const handleLogoClick = (e) => {
+    e.preventDefault()
+    if (onNavigate) {
+      onNavigate('home')
     }
   }
 
@@ -33,7 +51,11 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 flex items-center justify-between">
         
         {/* Centered Vertical Stack Logo */}
-        <a href="#" className="flex flex-col items-center group py-1 text-center select-none">
+        <a 
+          href="#" 
+          onClick={handleLogoClick}
+          className="flex flex-col items-center group py-1 text-center select-none cursor-pointer"
+        >
           <img 
             src="/images/logo.png" 
             alt="Sapience HCM Emblem" 
@@ -54,7 +76,8 @@ export function Navbar() {
           {navItems.map((item, index) => {
             const isFeatures = item.key === 'features'
             const isSolutions = item.key === 'solutions'
-            const isOpen = (isFeatures && featuresOpen) || (isSolutions && solutionsOpen)
+            const isCustomers = item.key === 'customers'
+            const isOpen = (isFeatures && featuresOpen) || (isSolutions && solutionsOpen) || (isCustomers && customersOpen)
 
             return (
               <div 
@@ -64,9 +87,15 @@ export function Navbar() {
                   if (isFeatures) {
                     setFeaturesOpen(true)
                     setSolutionsOpen(false)
+                    setCustomersOpen(false)
                   } else if (isSolutions) {
                     setSolutionsOpen(true)
                     setFeaturesOpen(false)
+                    setCustomersOpen(false)
+                  } else if (isCustomers) {
+                    setCustomersOpen(true)
+                    setFeaturesOpen(false)
+                    setSolutionsOpen(false)
                   }
                 }}
               >
@@ -101,6 +130,15 @@ export function Navbar() {
                   <SolutionsCascadeDropdown 
                     isOpen={solutionsOpen} 
                     onClose={() => setSolutionsOpen(false)} 
+                  />
+                )}
+
+                {/* Customers Flyout Dropdown */}
+                {isCustomers && (
+                  <CustomersCascadeDropdown
+                    isOpen={customersOpen}
+                    onClose={() => setCustomersOpen(false)}
+                    onNavigate={onNavigate}
                   />
                 )}
               </div>
@@ -141,10 +179,15 @@ export function Navbar() {
             {navItems.map((item, index) => (
               <a 
                 key={index}
-                href="#"
-                onClick={() => {
+                href={item.key === 'customers' ? '#customers-page' : '#'}
+                onClick={(e) => {
                   if (item.key === 'features') setFeaturesOpen(!featuresOpen)
                   if (item.key === 'solutions') setSolutionsOpen(!solutionsOpen)
+                  if (item.key === 'customers') {
+                    e.preventDefault()
+                    setMobileMenuOpen(false)
+                    if (onNavigate) onNavigate('customers')
+                  }
                 }}
                 className="flex items-center justify-between text-base font-semibold text-slate-700 py-2 border-b border-slate-100"
               >

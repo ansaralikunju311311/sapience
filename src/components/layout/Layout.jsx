@@ -2,14 +2,14 @@ import React from 'react'
 import { Navbar } from './Navbar'
 import { Footer } from './Footer'
 
-export function Layout({ children }) {
+export function Layout({ children, onNavigate }) {
   return (
     <div className="min-h-screen flex flex-col bg-white text-slate-900 selection:bg-[#0fa970] selection:text-white">
-      <Navbar />
+      <Navbar onNavigate={onNavigate} />
       <main className="flex-1">
         {children}
       </main>
-      <Footer />
+      <Footer onNavigate={onNavigate} />
     </div>
   )
 }

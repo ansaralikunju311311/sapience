@@ -1,7 +1,7 @@
 import React from 'react'
 import { Phone, Mail } from 'lucide-react'
 
-export function Footer() {
+export function Footer({ onNavigate }) {
   const footerSections = [
     {
       title: 'Product',
@@ -21,6 +21,15 @@ export function Footer() {
     }
   ]
 
+  const handleLinkClick = (e, linkName) => {
+    if (linkName === 'Customer stories' || linkName === 'Enterprise') {
+      e.preventDefault()
+      if (onNavigate) {
+        onNavigate('customers')
+      }
+    }
+  }
+
   return (
     <footer className="bg-slate-50 border-t border-slate-200/80 pt-16 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -28,7 +37,11 @@ export function Footer() {
           
           {/* Brand Info & Vertical Stack Logo */}
           <div className="lg:col-span-4 space-y-6">
-            <a href="#" className="inline-flex flex-col items-start group select-none">
+            <a 
+              href="#" 
+              onClick={(e) => { e.preventDefault(); if (onNavigate) onNavigate('home'); }}
+              className="inline-flex flex-col items-start group select-none cursor-pointer"
+            >
               <img 
                 src="/images/logo.png" 
                 alt="Sapience HCM Emblem" 
@@ -70,7 +83,11 @@ export function Footer() {
                 <ul className="space-y-2.5">
                   {section.links.map((link, lIdx) => (
                     <li key={lIdx}>
-                      <a href="#" className="text-xs text-slate-600 hover:text-[#00A896] transition-colors">
+                      <a 
+                        href="#" 
+                        onClick={(e) => handleLinkClick(e, link)}
+                        className="text-xs text-slate-600 hover:text-[#00A896] transition-colors"
+                      >
                         {link}
                       </a>
                     </li>
