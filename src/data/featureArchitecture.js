@@ -3172,24 +3172,32 @@ export const featuresRegistry = {
 
 // Helper to look up a feature by slug (or fallback default)
 export function getFeatureBySlug(slug) {
-  if (!slug) return null
-  const cleanSlug = slug.toLowerCase().replace('#', '').replace('features/', '').replace('feature/', '').split('/').pop()
+  if (!slug) return featuresRegistry['employee-information-system'] || null
+  const target = slug.toLowerCase().replace(/#/g, '').replace(/-/g, '').replace('features/', '').replace('feature/', '').split('/').pop()
   
-  if (featuresRegistry[cleanSlug]) {
-    return featuresRegistry[cleanSlug]
+  if (featuresRegistry[target]) {
+    return featuresRegistry[target]
   }
   
-  // Try finding by fuzzy match or slug key
+  // Try finding by fuzzy match or slug key without hyphens
   const keys = Object.keys(featuresRegistry)
-  const matchedKey = keys.find(k => k === cleanSlug || k.includes(cleanSlug) || cleanSlug.includes(k))
+  const matchedKey = keys.find(k => {
+    const cleanK = k.toLowerCase().replace(/-/g, '')
+    return cleanK === target || cleanK.includes(target) || target.includes(cleanK)
+  })
+
   if (matchedKey) {
     return featuresRegistry[matchedKey]
   }
 
-  return null
+  return featuresRegistry['employee-information-system'] || null
 }
 
 // Helper to get all features in a category
 export function getFeaturesByCategory(categorySlug) {
-  return Object.values(featuresRegistry).filter(f => f.categorySlug === categorySlug)
+  const targetCat = (categorySlug || '').toLowerCase().replace(/-/g, '')
+  return Object.values(featuresRegistry).filter(f => {
+    const cat = (f.categorySlug || '').toLowerCase().replace(/-/g, '')
+    return cat === targetCat
+  })
 }

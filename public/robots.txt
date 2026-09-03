@@ -1,0 +1,6 @@
+# SAPIENCE HCM Search Engine Robots Configuration
+User-agent: *
+Allow: /
+
+# Sitemap Index
+Sitemap: https://www.sapiencehrms.com/sitemap.xml

@@ -34,56 +34,82 @@ import { SolutionDetailPage } from './pages/SolutionDetailPage'
 // Feature Detail Page Template
 import { FeatureDetailPage } from './pages/FeatureDetailPage'
 
+// Location Regional SEO Template & Data
+import { LocationSEOPage } from './pages/locations/LocationSEOPage'
+
 function App() {
   const getInitialPage = () => {
-    const path = window.location.pathname.toLowerCase()
-    const hash = window.location.hash.toLowerCase()
+    const rawPath = window.location.pathname.toLowerCase()
+    const rawHash = window.location.hash.toLowerCase()
 
-    if (path.includes('/pricing') || hash.includes('pricing-page')) return 'pricing'
-    if (path.includes('/customers') || hash.includes('customers-page')) return 'customers'
+    const cleanPath = rawPath.replace(/-/g, '')
+    const cleanHash = rawHash.replace(/-/g, '')
+
+    if (cleanPath.includes('/pricing') || cleanHash.includes('pricing')) return 'pricing'
+    if (cleanPath.includes('/customers') || cleanHash.includes('customers')) return 'customers'
     
+    // Regional Location SEO Pages
+    if (cleanHash.includes('hrmsuae') || cleanHash.includes('hrmsdubai') || cleanHash.includes('hrmsabudhabi') || cleanHash.includes('hrmsqatar') || cleanHash.includes('hrmssaudiarabia') || cleanHash.includes('hrmsoman') || cleanHash.includes('hrmskuwait') || cleanHash.includes('hrmsbahrain')) {
+      const locKey = (rawHash || rawPath).replace('#', '').replace(/-/g, '')
+      return locKey
+    }
+
     // Feature Detail Pages Routing
-    if (hash.includes('feature/') || hash.includes('features/') || path.includes('/features/')) {
-      const cleanRoute = (hash || path).replace('#', '').replace('/features/', '').replace('/feature/', '').replace('features/', '').replace('feature/', '')
+    if (cleanHash.includes('feature/') || cleanHash.includes('features/') || cleanPath.includes('/features/')) {
+      const cleanRoute = (rawHash || rawPath)
+        .replace('#', '')
+        .replace('/features/', '')
+        .replace('/feature/', '')
+        .replace('features/', '')
+        .replace('feature/', '')
+        .replace(/-/g, '')
       return `feature/${cleanRoute}`
     }
 
     // Solution Detail Pages Routing
-    if (hash.includes('solution-') || hash.includes('solutions/industry/') || hash.includes('solutions/business-size/')) {
-      const cleanRoute = (hash || path)
-        .replace('#', '')
-        .replace('solutions/industry/', '')
-        .replace('solutions/business-size/', '')
-        .replace('solution-', '')
-      return `solution-${cleanRoute}`
+    if (cleanHash.includes('solution') || cleanHash.includes('solutions/industry/') || cleanHash.includes('solutions/businesssize/')) {
+      if (!cleanHash.endsWith('#solutions') && cleanHash !== '#solutions' && !cleanPath.endsWith('/solutions')) {
+        const cleanRoute = (rawHash || rawPath)
+          .replace('#', '')
+          .replace('solutions/industry/', '')
+          .replace('solutions/business-size/', '')
+          .replace('solutions/businesssize/', '')
+          .replace('solution-', '')
+          .replace('solution', '')
+          .replace(/-/g, '')
+        
+        if (cleanRoute.length > 0) {
+          return `solution${cleanRoute}`
+        }
+      }
     }
 
-    // Core HR
-    if (hash.includes('organization-management')) return 'organization-management'
-    if (hash.includes('personnel-administration')) return 'personnel-administration'
-    if (hash.includes('movements-exit')) return 'movements-exit'
-    if (hash.includes('letter-requests')) return 'letter-requests'
-    if (hash.includes('assets-issue')) return 'assets-issue'
-    if (path.includes('/core-hr') || hash.includes('core-hr')) return 'core-hr'
+    // Legacy Core HR
+    if (cleanHash.includes('organizationmanagement')) return 'organizationmanagement'
+    if (cleanHash.includes('personneladministration')) return 'personneladministration'
+    if (cleanHash.includes('movementsexit')) return 'movementsexit'
+    if (cleanHash.includes('letterrequests')) return 'letterrequests'
+    if (cleanHash.includes('assetsissue')) return 'assetsissue'
+    if (cleanPath.includes('/corehr') || cleanHash.includes('corehr')) return 'corehr'
 
-    // Payroll
-    if (hash.includes('payroll-processing')) return 'payroll-processing'
-    if (hash.includes('payroll-wps')) return 'payroll-wps'
-    if (hash.includes('payroll-indemnity')) return 'payroll-indemnity'
-    if (hash.includes('payroll-gl-sync')) return 'payroll-gl-sync'
-    if (hash.includes('payroll-payslips')) return 'payroll-payslips'
-    if (path.includes('/payroll') || hash.includes('payroll')) return 'payroll'
+    // Legacy Payroll
+    if (cleanHash.includes('payrollprocessing')) return 'payrollprocessing'
+    if (cleanHash.includes('payrollwps')) return 'payrollwps'
+    if (cleanHash.includes('payrollindemnity')) return 'payrollindemnity'
+    if (cleanHash.includes('payrollglsync')) return 'payrollglsync'
+    if (cleanHash.includes('payrollpayslips')) return 'payrollpayslips'
+    if (cleanPath.includes('/payroll') || cleanHash.includes('payroll')) return 'payroll'
 
-    // Time & Attendance
-    if (hash.includes('attendance-biometric')) return 'attendance-biometric'
-    if (hash.includes('attendance-roster')) return 'attendance-roster'
-    if (hash.includes('attendance-overtime')) return 'attendance-overtime'
-    if (hash.includes('attendance-timesheet')) return 'attendance-timesheet'
-    if (hash.includes('attendance-leave-sync')) return 'attendance-leave-sync'
-    if (path.includes('/time-attendance') || hash.includes('time-attendance')) return 'time-attendance'
+    // Legacy Time & Attendance
+    if (cleanHash.includes('attendancebiometric')) return 'attendancebiometric'
+    if (cleanHash.includes('attendanceroster')) return 'attendanceroster'
+    if (cleanHash.includes('attendanceovertime')) return 'attendanceovertime'
+    if (cleanHash.includes('attendancetimesheet')) return 'attendancetimesheet'
+    if (cleanHash.includes('attendanceleavesync')) return 'attendanceleavesync'
+    if (cleanPath.includes('/timeattendance') || cleanHash.includes('timeattendance')) return 'timeattendance'
 
     // Solutions Hub Page
-    if (path.includes('/solutions') || hash.includes('solutions')) return 'solutions'
+    if (cleanPath.includes('/solutions') || cleanHash.includes('solutions')) return 'solutions'
 
     return 'home'
   }
@@ -107,30 +133,44 @@ function App() {
     setCurrentPage(page)
     window.scrollTo({ top: 0, behavior: 'smooth' })
 
-    if (page === 'pricing') {
-      window.history.pushState(null, '', '#pricing-page')
-    } else if (page === 'customers') {
-      window.history.pushState(null, '', '#customers-page')
+    const cleanPage = page.replace(/-/g, '')
+
+    if (cleanPage === 'pricing') {
+      window.history.pushState(null, '', '#pricing')
+    } else if (cleanPage === 'customers') {
+      window.history.pushState(null, '', '#customers')
+    } else if (cleanPage.startsWith('hrms')) {
+      window.history.pushState(null, '', `#${cleanPage}`)
     } else if (page.startsWith('feature/')) {
-      window.history.pushState(null, '', `#${page}`)
-    } else if (page.startsWith('solution-')) {
-      window.history.pushState(null, '', `#${page}`)
-    } else if (['organization-management', 'personnel-administration', 'movements-exit', 'letter-requests', 'assets-issue', 'core-hr'].includes(page)) {
-      window.history.pushState(null, '', `#${page}`)
-    } else if (['payroll-processing', 'payroll-wps', 'payroll-indemnity', 'payroll-gl-sync', 'payroll-payslips', 'payroll'].includes(page)) {
-      window.history.pushState(null, '', `#${page}`)
-    } else if (['attendance-biometric', 'attendance-roster', 'attendance-overtime', 'attendance-timesheet', 'attendance-leave-sync', 'time-attendance'].includes(page)) {
-      window.history.pushState(null, '', `#${page}`)
-    } else if (page === 'solutions') {
+      const parts = page.replace('feature/', '').split('/')
+      const cleanParts = parts.map(p => p.replace(/-/g, ''))
+      window.history.pushState(null, '', `#feature/${cleanParts.join('/')}`)
+    } else if (page.startsWith('solution-') || page.startsWith('solution')) {
+      const slug = page.replace('solution-', '').replace('solution', '').replace(/-/g, '')
+      window.history.pushState(null, '', `#solution${slug}`)
+    } else if (['organizationmanagement', 'personneladministration', 'movementsexit', 'letterrequests', 'assetsissue', 'corehr'].includes(cleanPage)) {
+      window.history.pushState(null, '', `#${cleanPage}`)
+    } else if (['payrollprocessing', 'payrollwps', 'payrollindemnity', 'payrollglsync', 'payrollpayslips', 'payroll'].includes(cleanPage)) {
+      window.history.pushState(null, '', `#${cleanPage}`)
+    } else if (['attendancebiometric', 'attendanceroster', 'attendanceovertime', 'attendancetimesheet', 'attendanceleavesync', 'timeattendance'].includes(cleanPage)) {
+      window.history.pushState(null, '', `#${cleanPage}`)
+    } else if (cleanPage === 'solutions') {
       window.history.pushState(null, '', '#solutions')
     } else {
       window.history.pushState(null, '', window.location.pathname)
     }
   }
 
+  const normPage = currentPage.replace(/-/g, '')
+
   // General Pages
-  if (currentPage === 'pricing') return <PricingPage onNavigate={handleNavigate} />
-  if (currentPage === 'customers') return <CustomersPage onNavigate={handleNavigate} />
+  if (normPage === 'pricing') return <PricingPage onNavigate={handleNavigate} />
+  if (normPage === 'customers') return <CustomersPage onNavigate={handleNavigate} />
+
+  // Regional GCC Location Pages
+  if (normPage.startsWith('hrms')) {
+    return <LocationSEOPage locationSlug={normPage} onNavigate={handleNavigate} />
+  }
 
   // Feature Detail Dynamic Route
   if (currentPage.startsWith('feature/')) {
@@ -148,8 +188,8 @@ function App() {
   }
 
   // Solution Detail Dynamic Route
-  if (currentPage.startsWith('solution-')) {
-    const slug = currentPage.replace('solution-', '')
+  if (currentPage.startsWith('solution')) {
+    const slug = currentPage.replace('solution-', '').replace('solution', '')
     return (
       <SolutionDetailPage 
         solutionSlug={slug} 
@@ -159,31 +199,31 @@ function App() {
   }
 
   // Legacy Core HR Pages
-  if (currentPage === 'organization-management') return <OrganizationManagementPage onNavigate={handleNavigate} />
-  if (currentPage === 'personnel-administration') return <PersonnelAdministrationPage onNavigate={handleNavigate} />
-  if (currentPage === 'movements-exit') return <MovementsExitPage onNavigate={handleNavigate} />
-  if (currentPage === 'letter-requests') return <LetterRequestsPage onNavigate={handleNavigate} />
-  if (currentPage === 'assets-issue') return <AssetsIssuePage onNavigate={handleNavigate} />
-  if (currentPage === 'core-hr') return <CoreHRPage onNavigate={handleNavigate} />
+  if (normPage === 'organizationmanagement') return <OrganizationManagementPage onNavigate={handleNavigate} />
+  if (normPage === 'personneladministration') return <PersonnelAdministrationPage onNavigate={handleNavigate} />
+  if (normPage === 'movementsexit') return <MovementsExitPage onNavigate={handleNavigate} />
+  if (normPage === 'letterrequests') return <LetterRequestsPage onNavigate={handleNavigate} />
+  if (normPage === 'assetsissue') return <AssetsIssuePage onNavigate={handleNavigate} />
+  if (normPage === 'corehr') return <CoreHRPage onNavigate={handleNavigate} />
 
   // Legacy Payroll Pages
-  if (currentPage === 'payroll-processing') return <PayrollProcessingPage onNavigate={handleNavigate} />
-  if (currentPage === 'payroll-wps') return <WpsCompliancePage onNavigate={handleNavigate} />
-  if (currentPage === 'payroll-indemnity') return <IndemnityGratuityPage onNavigate={handleNavigate} />
-  if (currentPage === 'payroll-gl-sync') return <GeneralLedgerSyncPage onNavigate={handleNavigate} />
-  if (currentPage === 'payroll-payslips') return <PayslipsPayoutsPage onNavigate={handleNavigate} />
-  if (currentPage === 'payroll') return <PayrollPage onNavigate={handleNavigate} />
+  if (normPage === 'payrollprocessing') return <PayrollProcessingPage onNavigate={handleNavigate} />
+  if (normPage === 'payrollwps') return <WpsCompliancePage onNavigate={handleNavigate} />
+  if (normPage === 'payrollindemnity') return <IndemnityGratuityPage onNavigate={handleNavigate} />
+  if (normPage === 'payrollglsync') return <GeneralLedgerSyncPage onNavigate={handleNavigate} />
+  if (normPage === 'payrollpayslips') return <PayslipsPayoutsPage onNavigate={handleNavigate} />
+  if (normPage === 'payroll') return <PayrollPage onNavigate={handleNavigate} />
 
   // Legacy Time & Attendance Pages
-  if (currentPage === 'attendance-biometric') return <BiometricIntegrationPage onNavigate={handleNavigate} />
-  if (currentPage === 'attendance-roster') return <DutyRosterPage onNavigate={handleNavigate} />
-  if (currentPage === 'attendance-overtime') return <OvertimeExceptionsPage onNavigate={handleNavigate} />
-  if (currentPage === 'attendance-timesheet') return <TimesheetJobCostingPage onNavigate={handleNavigate} />
-  if (currentPage === 'attendance-leave-sync') return <LeaveCalendarSyncPage onNavigate={handleNavigate} />
-  if (currentPage === 'time-attendance') return <TimeAttendancePage onNavigate={handleNavigate} />
+  if (normPage === 'attendancebiometric') return <BiometricIntegrationPage onNavigate={handleNavigate} />
+  if (normPage === 'attendanceroster') return <DutyRosterPage onNavigate={handleNavigate} />
+  if (normPage === 'attendanceovertime') return <OvertimeExceptionsPage onNavigate={handleNavigate} />
+  if (normPage === 'attendancetimesheet') return <TimesheetJobCostingPage onNavigate={handleNavigate} />
+  if (normPage === 'attendanceleavesync') return <LeaveCalendarSyncPage onNavigate={handleNavigate} />
+  if (normPage === 'timeattendance') return <TimeAttendancePage onNavigate={handleNavigate} />
 
   // Solutions Hub Page
-  if (currentPage === 'solutions') return <SolutionsOverviewPage onNavigate={handleNavigate} />
+  if (normPage === 'solutions') return <SolutionsOverviewPage onNavigate={handleNavigate} />
 
   return <HomePage onNavigate={handleNavigate} />
 }

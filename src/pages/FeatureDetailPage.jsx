@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Layout } from '../components/layout/Layout'
 import { FeatureMockup } from '../components/features/FeatureMockup'
+import { SEOHead } from '../components/seo/SEOHead'
 import { 
   getFeatureBySlug, 
   getFeaturesByCategory, 
@@ -37,13 +38,6 @@ export function FeatureDetailPage({ featureSlug, categorySlug, onNavigate }) {
   // Retrieve target feature details
   const feature = getFeatureBySlug(featureSlug) || getFeatureBySlug('employee-information-system')
 
-  // Set document title dynamically for SEO
-  useEffect(() => {
-    if (feature) {
-      document.title = `${feature.title} | Sapience HCM Enterprise HR Platform`
-    }
-  }, [feature])
-
   if (!feature) {
     return (
       <Layout onNavigate={onNavigate}>
@@ -70,8 +64,29 @@ export function FeatureDetailPage({ featureSlug, categorySlug, onNavigate }) {
     }
   }
 
+  const featureSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    'name': `${feature.title} - Sapience HCM`,
+    'description': feature.description,
+    'applicationCategory': 'BusinessApplication',
+    'operatingSystem': 'Cloud, iOS, Android'
+  }
+
+  const cleanCategorySlug = (feature.categorySlug || '').replace(/-/g, '')
+  const cleanFeatureSlug = (feature.slug || '').replace(/-/g, '')
+
   return (
     <Layout onNavigate={onNavigate}>
+      
+      {/* Dynamic SEO Metadata & Schema */}
+      <SEOHead 
+        pageKey={feature.slug}
+        title={`${feature.title} | Sapience HCM Enterprise HR Platform`}
+        description={feature.description}
+        canonicalUrl={`https://www.sapiencehrms.com/#feature/${cleanCategorySlug}/${cleanFeatureSlug}`}
+        schemaData={featureSchema}
+      />
       
       {/* 1. BREADCRUMBS & TOP NAV BAR */}
       <div className="bg-slate-900 text-slate-300 py-3 border-b border-slate-800">

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Layout } from '../components/layout/Layout'
 import { FeatureMockup } from '../components/features/FeatureMockup'
+import { SEOHead } from '../components/seo/SEOHead'
 import { getSolutionBySlug, getSolutionsByType } from '../data/solutionsArchitecture'
 import { 
   ChevronRight, 
@@ -35,12 +36,6 @@ export function SolutionDetailPage({ solutionSlug, onNavigate }) {
 
   const solution = getSolutionBySlug(solutionSlug) || getSolutionBySlug('it-software')
 
-  useEffect(() => {
-    if (solution) {
-      document.title = `${solution.title} | Sapience HCM Enterprise HR Solutions`
-    }
-  }, [solution])
-
   if (!solution) {
     return (
       <Layout onNavigate={onNavigate}>
@@ -73,8 +68,31 @@ export function SolutionDetailPage({ solutionSlug, onNavigate }) {
 
   const faqsList = solution.faqs || solution.extendedFaqs || []
 
+  const solutionSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    'name': `${solution.title} - Sapience HCM`,
+    'description': solution.description,
+    'provider': {
+      '@type': 'Organization',
+      'name': 'Sapience HCM',
+      'url': 'https://www.sapiencehrms.com'
+    }
+  }
+
+  const cleanSlug = (solution.slug || '').replace(/-/g, '')
+
   return (
     <Layout onNavigate={onNavigate}>
+      
+      {/* Dynamic SEO Metadata & Schema */}
+      <SEOHead 
+        pageKey={solution.slug}
+        title={`${solution.title} | Sapience HCM Enterprise HR Solutions`}
+        description={solution.description}
+        canonicalUrl={`https://www.sapiencehrms.com/#solution${cleanSlug}`}
+        schemaData={solutionSchema}
+      />
       
       {/* 1. BREADCRUMBS */}
       <div className="bg-slate-900 text-slate-300 py-3 border-b border-slate-800">
