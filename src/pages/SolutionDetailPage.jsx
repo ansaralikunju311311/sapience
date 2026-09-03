@@ -332,7 +332,7 @@ export function SolutionDetailPage({ solutionSlug, onNavigate }) {
               </h2>
             </div>
 
-            <div className="bg-slate-800/80 rounded-2xl border border-slate-700 overflow-hidden shadow-2xl">
+            <div className="bg-slate-800/80 rounded-2xl border border-slate-700 overflow-x-auto shadow-2xl">
               <table className="w-full text-left text-xs sm:text-sm text-slate-300">
                 <thead className="bg-slate-950 text-slate-400 uppercase font-bold text-[10px] sm:text-xs border-b border-slate-700">
                   <tr>

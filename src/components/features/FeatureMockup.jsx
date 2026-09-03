@@ -193,7 +193,7 @@ export function FeatureMockup({ type = 'EMPLOYEE_DOSSIER', title = 'SAPIENCE HCM
         </div>
 
         {/* Live Attendance Table */}
-        <div className="bg-slate-800/60 rounded-xl border border-slate-700/60 overflow-hidden">
+        <div className="bg-slate-800/60 rounded-xl border border-slate-700/60 overflow-x-auto">
           <table className="w-full text-left text-[11px] text-slate-300">
             <thead className="bg-slate-800 text-slate-400 uppercase font-bold text-[10px] border-b border-slate-700">
               <tr>
