@@ -16,8 +16,6 @@ export function Navbar({ onNavigate }) {
     { label: 'Solutions', hasDropdown: true, key: 'solutions' },
     { label: 'Pricing', hasDropdown: false, key: 'pricing' },
     { label: 'Customers', hasDropdown: true, key: 'customers' },
-    { label: 'Partners', hasDropdown: true, key: 'partners' },
-    { label: 'Resources', hasDropdown: true, key: 'resources' },
   ]
 
   const handleNavClick = (key) => {
@@ -129,6 +127,7 @@ export function Navbar({ onNavigate }) {
                   <FeaturesCascadeDropdown 
                     isOpen={featuresOpen} 
                     onClose={() => setFeaturesOpen(false)} 
+                    onNavigate={onNavigate}
                   />
                 )}
 
@@ -137,6 +136,7 @@ export function Navbar({ onNavigate }) {
                   <SolutionsCascadeDropdown 
                     isOpen={solutionsOpen} 
                     onClose={() => setSolutionsOpen(false)} 
+                    onNavigate={onNavigate}
                   />
                 )}
 

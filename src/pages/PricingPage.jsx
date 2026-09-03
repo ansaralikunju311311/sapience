@@ -101,7 +101,7 @@ export function PricingPage({ onNavigate }) {
         {/* Current Pricing Calculator & Plans (Preserving current good pricing design) */}
         <PricingSection />
 
-        {/* Detailed Feature Comparison Matrix (Zoho People Style) */}
+        {/* Detailed Feature Comparison Matrix */}
         <section className="py-20 bg-white border-t border-slate-200/80">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
             

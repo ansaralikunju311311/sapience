@@ -25,3 +25,4 @@ export function HomePage({ onNavigate }) {
     </Layout>
   )
 }
+

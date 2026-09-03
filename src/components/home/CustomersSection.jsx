@@ -6,30 +6,13 @@ export function CustomersSection() {
 
   const clients = [
     {
-      id: 'toyota',
-      name: 'Toyota Mobility',
-      logo: '/images/client/Toyota-Logo-1989-500x281.webp',
-      industry: 'Automotive & Manufacturing',
-      employees: '12,500+ Employees',
-      locations: '14 Manufacturing Plants',
-      quote: "Sapience HCM completely transformed our workforce operations. Live shift attendance sync across 14 plants eliminated payroll friction that used to take days of manual reconciliation.",
-      author: "Rajesh Varma",
-      role: "Vice President of Human Resources",
-      company: "Toyota Mobility APAC",
-      metrics: [
-        { label: "Attendance Sync Rate", value: "99.8%", change: "Real-time" },
-        { label: "Payroll Processing Time", value: "3 Hours", change: "Down from 5 days" },
-        { label: "Shift Compliance", value: "100%", change: "Automated alerts" }
-      ]
-    },
-    {
       id: 'pwc',
       name: 'PwC Global',
       logo: '/images/client/PwC-logo-527x400.webp',
-      industry: 'Professional Services & Consulting',
+      industry: 'Professional Services',
       employees: '8,200+ Consultants',
       locations: '18 Regional Hubs',
-      quote: "Managing appraisals and career growth matrices for thousands of consultants required extreme precision. Sapience AI auto-summarized feedback into clear, actionable performance reviews.",
+      quote: "Sapience HCM delivers strategic business value to every person in our organization. Managing appraisals and career growth matrices for thousands of consultants is completely paperless and seamless.",
       author: "Marcus Vance",
       role: "Partner & Head of People Operations",
       company: "PwC Advisory Services",
@@ -40,13 +23,64 @@ export function CustomersSection() {
       ]
     },
     {
+      id: 'toyota',
+      name: 'Toyota Mobility',
+      logo: '/images/client/Toyota-Logo-1989-500x281.webp',
+      industry: 'Automotive & Manufacturing',
+      employees: '12,500+ Employees',
+      locations: '14 Assembly Facilities',
+      quote: "Shift duty roster management and rotating attendance machine integration across our plants eliminated payroll friction that used to take days of manual reconciliation.",
+      author: "Rajesh Varma",
+      role: "Vice President of Human Resources",
+      company: "Toyota Mobility APAC",
+      metrics: [
+        { label: "Attendance Sync Rate", value: "99.8%", change: "Real-time" },
+        { label: "Payroll Processing Time", value: "3 Hours", change: "Down from 5 days" },
+        { label: "Shift Compliance", value: "100%", change: "Automated alerts" }
+      ]
+    },
+    {
+      id: 'majid-al-futtaim',
+      name: 'Majid Al Futtaim',
+      logo: '/images/logo.png',
+      industry: 'Retail, Real Estate & Entertainment',
+      employees: '45,000+ Staff',
+      locations: '15 Middle East Markets',
+      quote: "Sapience HCM simplified our Middle East multi-country payroll, WPS compliance, and leave salary processing in a single unified enterprise database.",
+      author: "Tariq Al-Mansoor",
+      role: "Chief Human Resources Officer",
+      company: "Majid Al Futtaim Group",
+      metrics: [
+        { label: "WPS SIF Accuracy", value: "100%", change: "MOHRE Compliant" },
+        { label: "Multi-Country Payroll", value: "15 Countries", change: "Single Database" },
+        { label: "Gratuity Calculation", value: "Automated", change: "Zero Errors" }
+      ]
+    },
+    {
+      id: 'aecom',
+      name: 'AECOM',
+      logo: '/images/logo.png',
+      industry: 'Infrastructure & Engineering',
+      employees: '9,500+ Engineers',
+      locations: 'Middle East Projects',
+      quote: "Sapience Labour Job Costing allowed our project managers to track employee timesheets and allocate direct/indirect labor costs accurately to client jobs.",
+      author: "David Miller",
+      role: "Director of Operations",
+      company: "AECOM Middle East",
+      metrics: [
+        { label: "Job Costing Accuracy", value: "99.9%", change: "Real-time" },
+        { label: "Timesheet Submission", value: "96%", change: "On-time" },
+        { label: "ERP GL Sync", value: "Instant", change: "SAP Integration" }
+      ]
+    },
+    {
       id: 'essar',
       name: 'Essar Enterprise',
       logo: '/images/client/Essar-logo-300x154.webp',
-      industry: 'Energy & Infrastructure',
+      industry: 'Energy & Heavy Industry',
       employees: '15,000+ Personnel',
-      locations: '9 Global Worksites',
-      quote: "Onboarding employees across remote offshore and onshore sites used to involve hundreds of physical papers. Now every hire completes digital onboarding in under 15 minutes.",
+      locations: 'Global Worksites',
+      quote: "Onboarding employees across remote offshore and onshore sites used to involve hundreds of physical papers. Sapience HCM made our onboarding paperless and fast.",
       author: "Priya Raghavan",
       role: "Global HR Operations Lead",
       company: "Essar Group",
@@ -54,40 +88,6 @@ export function CustomersSection() {
         { label: "Onboarding Speed", value: "15 Mins", change: "Paperless flow" },
         { label: "Admin Time Saved", value: "85%", change: "Automated tasks" },
         { label: "Compliance Score", value: "100%", change: "Audit ready" }
-      ]
-    },
-    {
-      id: 'global-logistics',
-      name: 'Apex Global Logistics',
-      logo: '/images/client/234727.webp',
-      industry: 'Supply Chain & Logistics',
-      employees: '6,400+ Fleet Personnel',
-      locations: '24 Distribution Centers',
-      quote: "With mobile attendance and geo-verified punch-ins, our field logistics personnel stay connected effortlessly. Sapience HCM gave us 100% visibility over dispersed teams.",
-      author: "Ananya Sharma",
-      role: "Director of HR Operations",
-      company: "Apex Global",
-      metrics: [
-        { label: "Fleet Visibility", value: "100%", change: "Geo-tracked" },
-        { label: "Overtime Discrepancy", value: "0%", change: "Resolved" },
-        { label: "Employee Adoption", value: "98%", change: "Mobile app" }
-      ]
-    },
-    {
-      id: 'tech-innovators',
-      name: 'Horizon Tech Solutions',
-      logo: '/images/client/c30ab88c6252eee1fcc2e440859e6591.webp',
-      industry: 'Enterprise Software & Cloud',
-      employees: '3,800+ Engineers',
-      locations: 'Hybrid & Remote',
-      quote: "Sapience HCM’s self-service leave portal and real-time analytics gave our leadership instant clarity into engineering allocations and team well-being across 12 countries.",
-      author: "David Chen",
-      role: "Chief People Officer",
-      company: "Horizon Tech",
-      metrics: [
-        { label: "Leave Approval Time", value: "< 2 Mins", change: "Auto-approved" },
-        { label: "HR Query Volume", value: "-65%", change: "Self-service" },
-        { label: "Retention Rate", value: "96.5%", change: "Top decile" }
       ]
     }
   ]
