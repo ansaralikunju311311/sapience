@@ -27,14 +27,12 @@ import { OvertimeExceptionsPage } from './pages/time-attendance/OvertimeExceptio
 import { TimesheetJobCostingPage } from './pages/time-attendance/TimesheetJobCostingPage'
 import { LeaveCalendarSyncPage } from './pages/time-attendance/LeaveCalendarSyncPage'
 
-// Solutions Pages
+// Solutions Pages & Templates
 import { SolutionsOverviewPage } from './pages/solutions/SolutionsOverviewPage'
-import { IndustrySolutionPage } from './pages/solutions/IndustrySolutionPage'
-import { BusinessSizeSolutionPage } from './pages/solutions/BusinessSizeSolutionPage'
+import { SolutionDetailPage } from './pages/SolutionDetailPage'
 
-// Feature Detail Page Template & Registry
+// Feature Detail Page Template
 import { FeatureDetailPage } from './pages/FeatureDetailPage'
-import { getFeatureBySlug } from './data/featureArchitecture'
 
 function App() {
   const getInitialPage = () => {
@@ -48,6 +46,16 @@ function App() {
     if (hash.includes('feature/') || hash.includes('features/') || path.includes('/features/')) {
       const cleanRoute = (hash || path).replace('#', '').replace('/features/', '').replace('/feature/', '').replace('features/', '').replace('feature/', '')
       return `feature/${cleanRoute}`
+    }
+
+    // Solution Detail Pages Routing
+    if (hash.includes('solution-') || hash.includes('solutions/industry/') || hash.includes('solutions/business-size/')) {
+      const cleanRoute = (hash || path)
+        .replace('#', '')
+        .replace('solutions/industry/', '')
+        .replace('solutions/business-size/', '')
+        .replace('solution-', '')
+      return `solution-${cleanRoute}`
     }
 
     // Core HR
@@ -74,17 +82,7 @@ function App() {
     if (hash.includes('attendance-leave-sync')) return 'attendance-leave-sync'
     if (path.includes('/time-attendance') || hash.includes('time-attendance')) return 'time-attendance'
 
-    // Solutions
-    if (hash.startsWith('#solution-it')) return 'solution-it'
-    if (hash.startsWith('#solution-media')) return 'solution-media'
-    if (hash.startsWith('#solution-education')) return 'solution-education'
-    if (hash.startsWith('#solution-healthcare')) return 'solution-healthcare'
-    if (hash.startsWith('#solution-finance')) return 'solution-finance'
-    if (hash.startsWith('#solution-manufacturing')) return 'solution-manufacturing'
-    if (hash.startsWith('#solution-retail')) return 'solution-retail'
-    if (hash.startsWith('#solution-small-business')) return 'solution-small-business'
-    if (hash.startsWith('#solution-growth')) return 'solution-growth'
-    if (hash.startsWith('#solution-enterprise')) return 'solution-enterprise'
+    // Solutions Hub Page
     if (path.includes('/solutions') || hash.includes('solutions')) return 'solutions'
 
     return 'home'
@@ -115,13 +113,13 @@ function App() {
       window.history.pushState(null, '', '#customers-page')
     } else if (page.startsWith('feature/')) {
       window.history.pushState(null, '', `#${page}`)
+    } else if (page.startsWith('solution-')) {
+      window.history.pushState(null, '', `#${page}`)
     } else if (['organization-management', 'personnel-administration', 'movements-exit', 'letter-requests', 'assets-issue', 'core-hr'].includes(page)) {
       window.history.pushState(null, '', `#${page}`)
     } else if (['payroll-processing', 'payroll-wps', 'payroll-indemnity', 'payroll-gl-sync', 'payroll-payslips', 'payroll'].includes(page)) {
       window.history.pushState(null, '', `#${page}`)
     } else if (['attendance-biometric', 'attendance-roster', 'attendance-overtime', 'attendance-timesheet', 'attendance-leave-sync', 'time-attendance'].includes(page)) {
-      window.history.pushState(null, '', `#${page}`)
-    } else if (page.startsWith('solution-')) {
       window.history.pushState(null, '', `#${page}`)
     } else if (page === 'solutions') {
       window.history.pushState(null, '', '#solutions')
@@ -144,6 +142,17 @@ function App() {
       <FeatureDetailPage 
         categorySlug={catSlug} 
         featureSlug={featSlug} 
+        onNavigate={handleNavigate} 
+      />
+    )
+  }
+
+  // Solution Detail Dynamic Route
+  if (currentPage.startsWith('solution-')) {
+    const slug = currentPage.replace('solution-', '')
+    return (
+      <SolutionDetailPage 
+        solutionSlug={slug} 
         onNavigate={handleNavigate} 
       />
     )
@@ -173,16 +182,8 @@ function App() {
   if (currentPage === 'attendance-leave-sync') return <LeaveCalendarSyncPage onNavigate={handleNavigate} />
   if (currentPage === 'time-attendance') return <TimeAttendancePage onNavigate={handleNavigate} />
 
-  // Solutions Pages
+  // Solutions Hub Page
   if (currentPage === 'solutions') return <SolutionsOverviewPage onNavigate={handleNavigate} />
-  if (currentPage.startsWith('solution-') && !['solution-small-business', 'solution-growth', 'solution-enterprise'].includes(currentPage)) {
-    const key = currentPage.replace('solution-', '')
-    return <IndustrySolutionPage solutionKey={key} onNavigate={handleNavigate} />
-  }
-  if (['solution-small-business', 'solution-growth', 'solution-enterprise'].includes(currentPage)) {
-    const key = currentPage.replace('solution-', '')
-    return <BusinessSizeSolutionPage sizeKey={key} onNavigate={handleNavigate} />
-  }
 
   return <HomePage onNavigate={handleNavigate} />
 }
