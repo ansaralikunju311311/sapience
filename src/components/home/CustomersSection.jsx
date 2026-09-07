@@ -42,7 +42,7 @@ export function CustomersSection() {
     {
       id: 'majid-al-futtaim',
       name: 'Majid Al Futtaim',
-      logo: '/images/logo.png',
+      logo: '/images/client/234727.webp',
       industry: 'Retail, Real Estate & Entertainment',
       employees: '45,000+ Staff',
       locations: '15 Middle East Markets',
@@ -59,7 +59,7 @@ export function CustomersSection() {
     {
       id: 'aecom',
       name: 'AECOM',
-      logo: '/images/logo.png',
+      logo: '/images/client/c30ab88c6252eee1fcc2e440859e6591.webp',
       industry: 'Infrastructure & Engineering',
       employees: '9,500+ Engineers',
       locations: 'Middle East Projects',
@@ -107,7 +107,7 @@ export function CustomersSection() {
       
       {/* Background Decorative Lighting Effect */}
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#00A896]/15 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-[#F95738]/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-[#FD6602]/10 rounded-full blur-3xl pointer-events-none" />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-16">
         
@@ -223,7 +223,7 @@ export function CustomersSection() {
               {/* Author & Control Nav */}
               <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-slate-800">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-[#00A896] to-emerald-400 flex items-center justify-center text-white font-bold text-sm shadow-md">
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-[#00A896] to-[#FD6602] flex items-center justify-center text-white font-bold text-sm shadow-md">
                     {current.author.split(' ').map(n => n[0]).join('')}
                   </div>
                   <div>
@@ -306,7 +306,7 @@ export function CustomersSection() {
             <p className="text-xs text-slate-400 font-medium">Active Employees Managed</p>
           </div>
           <div className="text-center space-y-1">
-            <p className="text-3xl sm:text-4xl font-extrabold text-[#F95738] tracking-tight">3x</p>
+            <p className="text-3xl sm:text-4xl font-extrabold text-[#FD6602] tracking-tight">3x</p>
             <p className="text-xs text-slate-400 font-medium">Faster Payroll Input Cycles</p>
           </div>
           <div className="text-center space-y-1">

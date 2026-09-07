@@ -4,9 +4,18 @@
   --font-sans: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --color-brand-teal: #00A896;
   --color-brand-teal-hover: #00887A;
-  --color-brand-orange: #F95738;
-  --color-brand-orange-hover: #E04426;
+  --color-brand-teal-light: #E6F7F5;
+  --color-brand-teal-glow: rgba(0, 168, 150, 0.18);
+
+  --color-brand-orange: #FD6602;
+  --color-brand-orange-hover: #E05300;
+  --color-brand-orange-light: #FFF2E8;
+  --color-brand-orange-glow: rgba(253, 102, 2, 0.18);
+
   --color-brand-dark: #032B26;
+  --color-brand-dark-deep: #021F1C;
+  --color-brand-dark-card: #053D37;
+  --color-brand-dark-border: #0A5048;
 }
 
 @layer base {
@@ -18,6 +27,37 @@
   }
 }
 
+/* Logo Matched Utility Classes */
+.bg-brand-teal { background-color: #00A896; }
+.bg-brand-teal-hover:hover { background-color: #00887A; }
+.text-brand-teal { color: #00A896; }
+.border-brand-teal { border-color: #00A896; }
+
+.bg-brand-orange { background-color: #FD6602; }
+.bg-brand-orange-hover:hover { background-color: #E05300; }
+.text-brand-orange { color: #FD6602; }
+.border-brand-orange { border-color: #FD6602; }
+
+.bg-brand-dark { background-color: #032B26; }
+.bg-brand-dark-deep { background-color: #021F1C; }
+
+/* Signature Logo Gradient */
+.bg-gradient-brand {
+  background: linear-gradient(135deg, #00A896 0%, #FD6602 100%);
+}
+
+.text-gradient-brand {
+  background: linear-gradient(135deg, #00A896 0%, #FD6602 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-brand-light {
+  background: linear-gradient(135deg, #00C9B6 0%, #FF7E26 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 /* Custom Utilities */
 .shadow-soft {
   box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05), 0 4px 12px -2px rgba(0, 0, 0, 0.03);
@@ -25,6 +65,14 @@
 
 .shadow-card {
   box-shadow: 0 20px 40px -15px rgba(0, 168, 150, 0.1), 0 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.shadow-orange-glow {
+  box-shadow: 0 10px 25px -5px rgba(253, 102, 2, 0.25);
+}
+
+.shadow-teal-glow {
+  box-shadow: 0 10px 25px -5px rgba(0, 168, 150, 0.25);
 }
 
 .bg-ai-dark {

@@ -16,7 +16,7 @@ export function HomePage({ onNavigate }) {
     <Layout onNavigate={onNavigate}>
       <SEOHead 
         title="SAPIENCE HCM | #1 HRMS Software UAE & Payroll Software Dubai"
-        description="Sapience HCM by Cartel IT Solutions is the leading enterprise HRMS & payroll software in UAE, Dubai, Saudi Arabia & GCC. Automate WPS payroll, attendance, ATS & performance."
+        description="Sapience HCM by Sapience Technology LLC is the leading enterprise HRMS & payroll software in UAE, Dubai, Saudi Arabia & GCC. Automate WPS payroll, attendance, ATS & performance."
         canonicalUrl="https://www.sapiencehrms.com/"
       />
       <HeroSection />

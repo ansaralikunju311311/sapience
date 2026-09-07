@@ -30,11 +30,11 @@ export function DashboardPreview() {
               <div className="flex gap-1.5">
                 <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
                 <div className="w-3 h-3 rounded-full bg-amber-500/80"></div>
-                <div className="w-3 h-3 rounded-full bg-emerald-500/80"></div>
+                <div className="w-3 h-3 rounded-full bg-[#00A896]/80"></div>
               </div>
               <span className="ml-4 font-mono text-[11px] text-slate-400">app.sapiencehrms.com // executive-workspace-dashboard</span>
             </div>
-            <span className="text-[11px] font-bold text-teal-400 bg-teal-500/20 px-2.5 py-0.5 rounded-full border border-teal-500/30">
+            <span className="text-[11px] font-bold text-[#00A896] bg-[#00A896]/20 px-2.5 py-0.5 rounded-full border border-[#00A896]/30">
               Live Software System Preview
             </span>
           </div>

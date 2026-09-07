@@ -137,7 +137,7 @@ export function SolutionsOverviewPage({ onNavigate }) {
               >
                 <div className="space-y-2">
                   <div className="flex items-center justify-between">
-                    <span className="px-2 py-0.5 rounded bg-sky-500/10 text-sky-600 font-bold text-[10px] uppercase">
+                    <span className="px-2 py-0.5 rounded bg-[#00A896]/10 text-[#00A896] font-bold text-[10px] uppercase">
                       {size.slug}
                     </span>
                     <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-[#00A896] group-hover:translate-x-1 transition-transform" />
@@ -162,7 +162,7 @@ export function SolutionsOverviewPage({ onNavigate }) {
       </section>
 
       {/* 4. FINAL CTA */}
-      <section className="py-16 bg-gradient-to-r from-slate-900 via-[#004d40] to-slate-900 text-white text-center">
+      <section className="py-16 bg-gradient-to-r from-slate-950 via-[#032B26] to-slate-950 text-white text-center border-t border-[#00A896]/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
             Ready to simplify your organization's HR?

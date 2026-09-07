@@ -59,7 +59,10 @@ export function Navbar({ onNavigate }) {
   }
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-xs select-none">
+    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-xs select-none relative">
+      {/* Top Signature Logo Gradient Line */}
+      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#00A896] via-[#00C9B6] to-[#FD6602]" />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 sm:h-24 flex items-center justify-between">
         
         {/* Centered Vertical Stack Logo */}
@@ -74,10 +77,10 @@ export function Navbar({ onNavigate }) {
             className="h-9 sm:h-11 w-auto object-contain group-hover:scale-105 transition-transform duration-200"
           />
           <div className="flex flex-col items-start sm:items-center leading-tight mt-0.5 sm:mt-1">
-            <span className="font-extrabold text-sm sm:text-base tracking-tight text-black font-sans uppercase">
-              SAPIENCE HCM
+            <span className="font-extrabold text-sm sm:text-base tracking-tight text-[#032B26] font-sans uppercase">
+              SAPIENCE <span className="text-[#FD6602]">HCM</span>
             </span>
-            <span className="text-[10px] sm:text-xs font-semibold text-slate-700 tracking-normal">
+            <span className="text-[10px] sm:text-xs font-semibold text-[#00A896] tracking-normal">
               Optimizing Workforce
             </span>
           </div>

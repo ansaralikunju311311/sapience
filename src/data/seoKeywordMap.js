@@ -9,7 +9,7 @@ export const seoKeywordMap = {
     intent: 'Commercial / Transactional',
     targetLocation: 'United Arab Emirates (UAE)',
     title: 'HRMS Software UAE | Enterprise HR & Payroll Platform | SAPIENCE HCM',
-    description: 'Sapience HCM by Cartel IT Solutions is the #1 enterprise HRMS software in UAE & Dubai. Automate MOHRE WPS payroll, attendance, ATS & performance management.'
+    description: 'Sapience HCM by Sapience Technology LLC is the #1 enterprise HRMS software in UAE & Dubai. Automate MOHRE WPS payroll, attendance, ATS & performance management.'
   },
   'solutions': {
     primaryKeyword: 'HR & Payroll Software UAE',

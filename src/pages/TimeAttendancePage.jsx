@@ -70,7 +70,7 @@ export function TimeAttendancePage({ onNavigate }) {
           </div>
 
           <h1 className="text-3xl sm:text-5xl font-extrabold text-white leading-tight max-w-4xl mx-auto">
-            Real-Time <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00A896] via-teal-300 to-emerald-400">Time & Attendance System</span>
+            Real-Time <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00A896] via-teal-300 to-[#FD6602]">Time & Attendance System</span>
           </h1>
 
           <p className="text-slate-300 text-base sm:text-lg max-w-3xl mx-auto font-normal">

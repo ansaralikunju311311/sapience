@@ -138,11 +138,11 @@ export function CustomersPage({ onNavigate }) {
       <div className="bg-slate-50/50 min-h-screen text-slate-900">
         
         {/* Page Hero Header (Light Theme aligned with Home Page & Teal Brand Colors) */}
-        <section className="relative pt-12 pb-16 lg:pt-20 lg:pb-24 overflow-hidden bg-gradient-to-b from-teal-50/40 via-white to-slate-50/50 border-b border-slate-200/80">
+        <section className="relative pt-12 pb-16 lg:pt-20 lg:pb-24 overflow-hidden bg-gradient-to-b from-[#E6F7F5] via-white to-slate-50/50 border-b border-slate-200/80">
           
           {/* Subtle Brand Glow Effect */}
           <div className="absolute top-0 right-1/3 w-96 h-96 bg-[#00A896]/10 rounded-full blur-3xl pointer-events-none" />
-          <div className="absolute bottom-0 left-1/3 w-96 h-96 bg-[#F95738]/5 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute bottom-0 left-1/3 w-96 h-96 bg-[#FD6602]/5 rounded-full blur-3xl pointer-events-none" />
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-6">
             
@@ -177,7 +177,7 @@ export function CustomersPage({ onNavigate }) {
                 <span className="text-slate-900">99.4% Enterprise Retention</span>
               </div>
               <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full border border-slate-200 shadow-xs">
-                <Users2 className="w-4 h-4 text-[#F95738]" />
+                <Users2 className="w-4 h-4 text-[#FD6602]" />
                 <span className="text-slate-900">500+ Enterprise Clients</span>
               </div>
             </div>
@@ -214,12 +214,12 @@ export function CustomersPage({ onNavigate }) {
                   </blockquote>
 
                   <div className="flex items-center gap-4 pt-2">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-tr from-[#00A896] to-emerald-400 flex items-center justify-center text-white font-bold text-base shadow-md">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-tr from-[#00A896] to-[#FD6602] flex items-center justify-center text-white font-bold text-base shadow-md">
                       {featured.author.split(' ').map(n => n[0]).join('')}
                     </div>
                     <div>
                       <p className="text-base font-bold text-white">{featured.author}</p>
-                      <p className="text-xs text-slate-300">{featured.role}, <span className="text-teal-300">{featured.company}</span></p>
+                      <p className="text-xs text-slate-300">{featured.role}, <span className="text-[#00A896]">{featured.company}</span></p>
                     </div>
                   </div>
                 </div>
@@ -404,7 +404,7 @@ export function CustomersPage({ onNavigate }) {
                   {activeStoryModal.fullStory}
                 </p>
 
-                <div className="bg-teal-50/50 p-4 rounded-xl border border-teal-100 space-y-2">
+                <div className="bg-[#E6F7F5] p-4 rounded-xl border border-[#00A896]/30 space-y-2">
                   <p className="text-xs font-bold text-[#00A896]">Key Measured Outcomes:</p>
                   {activeStoryModal.results.map((r, i) => (
                     <div key={i} className="flex items-center gap-2 text-xs text-slate-700 font-medium">

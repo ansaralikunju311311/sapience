@@ -143,7 +143,7 @@ export function CoreHRPage({ onNavigate }) {
         {/* Background Gradients & Accents */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(0,168,150,0.25),rgba(255,255,255,0))]" />
         <div className="absolute top-0 right-0 w-96 h-96 bg-[#00A896]/10 rounded-full filter blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-emerald-500/10 rounded-full filter blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#00A896]/10 rounded-full filter blur-3xl pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -156,7 +156,7 @@ export function CoreHRPage({ onNavigate }) {
               </div>
 
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-[1.15]">
-                Manage your global workforce <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00A896] via-teal-300 to-emerald-400">effortlessly</span>
+                Manage your global workforce <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00A896] via-teal-300 to-[#FD6602]">effortlessly</span>
               </h1>
 
               <p className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0 font-normal">
@@ -221,7 +221,7 @@ export function CoreHRPage({ onNavigate }) {
                   {/* Quick Cards Grid */}
                   <div className="grid grid-cols-2 gap-3">
                     <div className="bg-slate-900/60 p-3 rounded-xl border border-slate-700/50 flex items-center gap-3">
-                      <div className="p-2 rounded-lg bg-teal-500/20 text-[#00A896]">
+                      <div className="p-2 rounded-lg bg-[#00A896]/20 text-[#00A896]">
                         <Building2 className="w-4 h-4" />
                       </div>
                       <div>
@@ -231,7 +231,7 @@ export function CoreHRPage({ onNavigate }) {
                     </div>
 
                     <div className="bg-slate-900/60 p-3 rounded-xl border border-slate-700/50 flex items-center gap-3">
-                      <div className="p-2 rounded-lg bg-emerald-500/20 text-emerald-400">
+                      <div className="p-2 rounded-lg bg-[#00A896]/20 text-[#00A896]">
                         <Users className="w-4 h-4" />
                       </div>
                       <div>
@@ -259,7 +259,7 @@ export function CoreHRPage({ onNavigate }) {
                               <div className="text-[10px] text-slate-400">{emp.role}</div>
                             </div>
                           </div>
-                          <span className="text-[10px] font-semibold text-teal-400 bg-teal-500/10 px-2 py-0.5 rounded-full border border-teal-500/20">
+                          <span className="text-[10px] font-semibold text-[#00A896] bg-[#00A896]/10 px-2 py-0.5 rounded-full border border-[#00A896]/20">
                             {emp.dept}
                           </span>
                         </div>
@@ -269,7 +269,7 @@ export function CoreHRPage({ onNavigate }) {
                 </div>
 
                 {/* Floating Badge Accent */}
-                <div className="mt-4 p-2.5 bg-gradient-to-r from-[#00A896]/20 to-emerald-500/20 rounded-xl border border-[#00A896]/30 flex items-center justify-between text-xs text-slate-200">
+                <div className="mt-4 p-2.5 bg-gradient-to-r from-[#00A896]/20 to-[#FD6602]/20 rounded-xl border border-[#00A896]/30 flex items-center justify-between text-xs text-slate-200">
                   <div className="flex items-center gap-2">
                     <ShieldCheck className="w-4 h-4 text-[#00A896]" />
                     <span>ISO 27001 & GDPR Compliant Encrypted Storage</span>
@@ -316,7 +316,7 @@ export function CoreHRPage({ onNavigate }) {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
               
               <div className="lg:col-span-6 space-y-5">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 text-teal-700 border border-teal-200 text-xs font-bold">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E6F7F5] text-[#00A896] border border-[#00A896]/30 text-xs font-bold">
                   <Building2 className="w-3.5 h-3.5" />
                   <span>Module 01: Organization Management</span>
                 </div>
@@ -383,7 +383,7 @@ export function CoreHRPage({ onNavigate }) {
                         <div className="text-xs text-slate-500">Head of Engineering • SAP-EMP-209</div>
                       </div>
                     </div>
-                    <span className="bg-emerald-100 text-emerald-800 text-[11px] font-bold px-2.5 py-0.5 rounded-full">
+                    <span className="bg-[#E6F7F5] text-[#00A896] text-[11px] font-bold px-2.5 py-0.5 rounded-full">
                       Full-Time
                     </span>
                   </div>
@@ -411,7 +411,7 @@ export function CoreHRPage({ onNavigate }) {
                     </div>
                     <div className="bg-slate-50 p-2.5 rounded-lg border border-slate-100">
                       <div className="text-[10px] text-slate-400 font-semibold uppercase">Visa Status</div>
-                      <div className="font-bold text-teal-600 mt-0.5">Verified / Active</div>
+                      <div className="font-bold text-[#00A896] mt-0.5">Verified / Active</div>
                     </div>
                   </div>
                 </div>
@@ -419,7 +419,7 @@ export function CoreHRPage({ onNavigate }) {
 
               {/* Text Content Right */}
               <div className="lg:col-span-6 space-y-5 order-1 lg:order-2">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-200 text-xs font-bold">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FFF2E8] text-[#FD6602] border border-[#FD6602]/30 text-xs font-bold">
                   <Users className="w-3.5 h-3.5" />
                   <span>Module 02: Personnel Administration</span>
                 </div>
@@ -463,7 +463,7 @@ export function CoreHRPage({ onNavigate }) {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
               
               <div className="lg:col-span-6 space-y-5">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-50 text-purple-700 border border-purple-200 text-xs font-bold">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FFF2E8] text-[#FD6602] border border-[#FD6602]/30 text-xs font-bold">
                   <UserCheck className="w-3.5 h-3.5" />
                   <span>Module 03: Movements & Exit Management</span>
                 </div>
@@ -502,16 +502,16 @@ export function CoreHRPage({ onNavigate }) {
                 <div className="bg-slate-900 text-white rounded-2xl p-6 shadow-xl space-y-4">
                   <div className="flex items-center justify-between border-b border-slate-800 pb-3">
                     <span className="text-xs font-extrabold uppercase text-slate-300">Exit Clearance Checklist</span>
-                    <span className="text-[11px] font-bold text-teal-400 bg-teal-500/20 px-2.5 py-0.5 rounded-full">
+                    <span className="text-[11px] font-bold text-[#00A896] bg-[#00A896]/20 px-2.5 py-0.5 rounded-full">
                       3 / 4 Cleared
                     </span>
                   </div>
 
                   <div className="space-y-2.5 text-xs">
                     {[
-                      { dept: 'IT Department', task: 'Laptop & Hardware Return', status: 'Cleared', color: 'text-emerald-400 bg-emerald-500/20' },
-                      { dept: 'Finance & Payroll', task: 'End of Service Gratuity Check', status: 'Cleared', color: 'text-emerald-400 bg-emerald-500/20' },
-                      { dept: 'Facilities', task: 'Access Card & Parking Badge', status: 'Cleared', color: 'text-emerald-400 bg-emerald-500/20' },
+                      { dept: 'IT Department', task: 'Laptop & Hardware Return', status: 'Cleared', color: 'text-[#00A896] bg-[#00A896]/20' },
+                      { dept: 'Finance & Payroll', task: 'End of Service Gratuity Check', status: 'Cleared', color: 'text-[#00A896] bg-[#00A896]/20' },
+                      { dept: 'Facilities', task: 'Access Card & Parking Badge', status: 'Cleared', color: 'text-[#00A896] bg-[#00A896]/20' },
                       { dept: 'Direct Manager', task: 'Project Handover & Documentation', status: 'Pending Approval', color: 'text-amber-400 bg-amber-500/20' },
                     ].map((step, i) => (
                       <div key={i} className="flex items-center justify-between bg-slate-800/80 p-3 rounded-xl border border-slate-700/60">
@@ -568,7 +568,7 @@ export function CoreHRPage({ onNavigate }) {
                       <div className="text-[10px] text-slate-500 leading-relaxed font-mono">
                         "To Whom It May Concern: This is to certify that Sarah Al-Mansoor is employed with Sapience HCM as Head of Engineering..."
                       </div>
-                      <div className="pt-2 flex items-center justify-between border-t border-slate-100 text-[10px] text-teal-700 font-bold">
+                      <div className="pt-2 flex items-center justify-between border-t border-slate-100 text-[10px] text-[#00A896] font-bold">
                         <span>Includes QR Verification Code</span>
                         <Download className="w-3.5 h-3.5 text-[#00A896]" />
                       </div>
@@ -627,7 +627,7 @@ export function CoreHRPage({ onNavigate }) {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
               
               <div className="lg:col-span-6 space-y-5">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-50 text-cyan-700 border border-cyan-200 text-xs font-bold">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E6F7F5] text-[#00A896] border border-[#00A896]/30 text-xs font-bold">
                   <Laptop className="w-3.5 h-3.5" />
                   <span>Module 05: Assets Issue & Returns</span>
                 </div>
@@ -673,7 +673,7 @@ export function CoreHRPage({ onNavigate }) {
                     {mockAssets.map((ast, i) => (
                       <div key={i} className="flex items-center justify-between bg-slate-50 p-3 rounded-xl border border-slate-100">
                         <div className="flex items-center gap-3">
-                          <div className="p-2 rounded-lg bg-cyan-100 text-cyan-800 font-bold">
+                          <div className="p-2 rounded-lg bg-[#E6F7F5] text-[#00A896] font-bold">
                             <Laptop className="w-4 h-4" />
                           </div>
                           <div>
@@ -681,7 +681,7 @@ export function CoreHRPage({ onNavigate }) {
                             <div className="text-[10px] text-slate-500 font-mono">{ast.code} • Assigned: {ast.assignedTo}</div>
                           </div>
                         </div>
-                        <span className="text-[10px] font-bold text-teal-700 bg-teal-50 px-2 py-0.5 rounded-full border border-teal-200">
+                        <span className="text-[10px] font-bold text-[#00A896] bg-[#E6F7F5] px-2 py-0.5 rounded-full border border-[#00A896]/30">
                           {ast.status}
                         </span>
                       </div>
@@ -723,7 +723,7 @@ export function CoreHRPage({ onNavigate }) {
             </div>
 
             <div className="bg-slate-800/80 border border-slate-700/70 rounded-2xl p-6 space-y-3">
-              <div className="p-3 bg-teal-500/20 text-teal-400 rounded-xl w-fit">
+              <div className="p-3 bg-[#00A896]/20 text-[#00A896] rounded-xl w-fit">
                 <FileText className="w-6 h-6" />
               </div>
               <h3 className="text-lg font-bold text-white">1-Click Letter Generator</h3>
@@ -733,7 +733,7 @@ export function CoreHRPage({ onNavigate }) {
             </div>
 
             <div className="bg-slate-800/80 border border-slate-700/70 rounded-2xl p-6 space-y-3">
-              <div className="p-3 bg-emerald-500/20 text-emerald-400 rounded-xl w-fit">
+              <div className="p-3 bg-[#00A896]/20 text-[#00A896] rounded-xl w-fit">
                 <ShieldCheck className="w-6 h-6" />
               </div>
               <h3 className="text-lg font-bold text-white">Manager Approvals Dashboard</h3>
@@ -746,7 +746,7 @@ export function CoreHRPage({ onNavigate }) {
       </section>
 
       {/* BOTTOM CTA */}
-      <section className="py-20 bg-gradient-to-br from-[#00A896] to-emerald-700 text-white text-center">
+      <section className="py-20 bg-gradient-to-br from-[#032B26] via-[#00A896] to-[#FD6602] text-white text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
             Ready to streamline your Core HR operations?

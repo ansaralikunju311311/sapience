@@ -390,7 +390,7 @@ export function FeatureDetailPage({ featureSlug, categorySlug, onNavigate }) {
             {prevFeature ? (
               <button 
                 onClick={() => handleFeatureClick(prevFeature.categorySlug, prevFeature.slug)}
-                className="p-4 rounded-xl border border-slate-200 hover:border-[#00A896] hover:bg-teal-50/40 text-left transition-all group cursor-pointer flex items-center gap-3"
+                className="p-4 rounded-xl border border-slate-200 hover:border-[#00A896] hover:bg-[#E6F7F5] text-left transition-all group cursor-pointer flex items-center gap-3"
               >
                 <ArrowLeft className="w-4 h-4 text-slate-400 group-hover:text-[#00A896] group-hover:-translate-x-1 transition-transform shrink-0" />
                 <div>
@@ -403,7 +403,7 @@ export function FeatureDetailPage({ featureSlug, categorySlug, onNavigate }) {
             {nextFeature && (
               <button 
                 onClick={() => handleFeatureClick(nextFeature.categorySlug, nextFeature.slug)}
-                className="p-4 rounded-xl border border-slate-200 hover:border-[#00A896] hover:bg-teal-50/40 text-right transition-all group cursor-pointer flex items-center justify-end gap-3"
+                className="p-4 rounded-xl border border-slate-200 hover:border-[#00A896] hover:bg-[#E6F7F5] text-right transition-all group cursor-pointer flex items-center justify-end gap-3"
               >
                 <div>
                   <span className="text-[10px] text-slate-400 font-bold uppercase block">Next Feature</span>
@@ -444,7 +444,7 @@ export function FeatureDetailPage({ featureSlug, categorySlug, onNavigate }) {
       </section>
 
       {/* 10. FINAL CTA BANNER */}
-      <section className="py-16 bg-gradient-to-r from-slate-900 via-[#004d40] to-slate-900 text-white text-center">
+      <section className="py-16 bg-gradient-to-r from-slate-950 via-[#032B26] to-slate-950 text-white text-center border-t border-[#00A896]/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
             Ready to simplify your HR operations?

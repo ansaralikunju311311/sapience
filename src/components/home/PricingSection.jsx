@@ -138,7 +138,7 @@ export function PricingSection() {
               <span className={`text-sm font-semibold ${isAnnual ? 'text-slate-900' : 'text-slate-500'}`}>
                 Billed Annually
               </span>
-              <span className="px-2.5 py-0.5 rounded-full text-xs font-extrabold bg-emerald-500/10 text-emerald-600 border border-emerald-500/20">
+              <span className="px-2.5 py-0.5 rounded-full text-xs font-extrabold bg-[#FD6602]/10 text-[#FD6602] border border-[#FD6602]/30">
                 SAVE 20%
               </span>
             </div>
@@ -151,22 +151,22 @@ export function PricingSection() {
                 <Users className="w-4 h-4 text-[#00A896]" />
                 Employee Count:
               </span>
-              <span className="text-sm font-extrabold text-[#00A896] bg-teal-50 px-2.5 py-0.5 rounded border border-teal-200 font-mono">
+              <span className="text-sm font-extrabold text-[#00A896] bg-[#E6F7F5] px-2.5 py-0.5 rounded border border-[#00A896]/30 font-mono">
                 {employeeCount} Users
               </span>
             </div>
 
             <input 
               type="range" 
-              min="5" 
+              min="10" 
               max="250" 
               step="5"
-              value={employeeCount} 
-              onChange={(e) => setEmployeeCount(Number(e.target.value))}
-              className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-[#00A896]"
+              value={employeeCount}
+              onChange={(e) => setEmployeeCount(parseInt(e.target.value))}
+              className="w-full accent-[#00A896] cursor-pointer"
             />
-            <div className="flex justify-between text-[10px] text-slate-400 font-mono">
-              <span>5 employees</span>
+            <div className="flex justify-between text-[10px] text-slate-400 font-medium">
+              <span>10 employees</span>
               <span>100 employees</span>
               <span>250+ employees</span>
             </div>
@@ -187,7 +187,7 @@ export function PricingSection() {
               >
                 {/* Popular Badge Pill */}
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-[#00A896] text-white text-xs font-black uppercase tracking-wider shadow-md">
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-[#00A896] to-[#FD6602] text-white text-xs font-black uppercase tracking-wider shadow-md">
                     {plan.badge}
                   </div>
                 )}
@@ -219,7 +219,7 @@ export function PricingSection() {
                   <ul className="space-y-3">
                     {plan.features.map((feat, fIdx) => (
                       <li key={fIdx} className="flex items-start gap-3 text-xs text-slate-700 font-medium">
-                        <div className="mt-0.5 p-0.5 rounded-full bg-emerald-100 text-emerald-700 shrink-0">
+                        <div className="mt-0.5 p-0.5 rounded-full bg-[#00A896]/10 text-[#00A896] shrink-0">
                           <Check className="w-3.5 h-3.5 stroke-[3]" />
                         </div>
                         <span>{feat}</span>

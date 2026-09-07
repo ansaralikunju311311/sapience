@@ -71,7 +71,7 @@ export function PayrollPage({ onNavigate }) {
           </div>
 
           <h1 className="text-3xl sm:text-5xl font-extrabold text-white leading-tight max-w-4xl mx-auto">
-            100% Compliant <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00A896] via-teal-300 to-emerald-400">Payroll Management System</span>
+            100% Compliant <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00A896] via-teal-300 to-[#FD6602]">Payroll Management System</span>
           </h1>
 
           <p className="text-slate-300 text-base sm:text-lg max-w-3xl mx-auto font-normal">

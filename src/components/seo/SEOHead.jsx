@@ -12,7 +12,7 @@ export function SEOHead({
   const mapData = pageKey ? getSEODataBySlug(pageKey) : null
 
   const finalTitle = title || (mapData ? mapData.title : 'HRMS Software UAE | Enterprise HR & Payroll Platform | SAPIENCE HCM')
-  const finalDescription = description || (mapData ? mapData.description : 'Sapience HCM by Cartel IT Solutions is the leading enterprise HRMS & payroll software in UAE, Dubai & GCC.')
+  const finalDescription = description || (mapData ? mapData.description : 'Sapience HCM by Sapience Technology LLC is the leading enterprise HRMS & payroll software in UAE, Dubai & GCC.')
   
   const cleanKey = pageKey ? pageKey.replace(/-/g, '') : ''
   const finalCanonical = canonicalUrl || (cleanKey ? `https://www.sapiencehrms.com/#${cleanKey}` : 'https://www.sapiencehrms.com/')
@@ -79,7 +79,7 @@ export function SEOHead({
       '@context': 'https://schema.org',
       '@type': 'Organization',
       'name': 'Sapience HCM',
-      'legalName': 'Cartel IT Solutions LLC',
+      'legalName': 'Sapience Technology LLC',
       'url': 'https://www.sapiencehrms.com',
       'logo': 'https://www.sapiencehrms.com/images/logo.png',
       'address': {

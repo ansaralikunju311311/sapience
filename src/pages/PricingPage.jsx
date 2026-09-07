@@ -65,7 +65,7 @@ export function PricingPage({ onNavigate }) {
       <div className="bg-slate-50 min-h-screen text-slate-900">
         
         {/* Dedicated Pricing Page Hero Banner */}
-        <section className="relative pt-12 pb-8 lg:pt-16 lg:pb-12 bg-gradient-to-b from-teal-50/50 via-white to-slate-50 border-b border-slate-200/80">
+        <section className="relative pt-12 pb-8 lg:pt-16 lg:pb-12 bg-gradient-to-b from-[#E6F7F5] via-white to-slate-50 border-b border-slate-200/80">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#00A896]/10 text-[#00A896] text-xs font-extrabold border border-[#00A896]/20 uppercase tracking-wider">
               <Sparkles className="w-4 h-4" />
@@ -73,7 +73,7 @@ export function PricingPage({ onNavigate }) {
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.1]">
-              Simple, transparent pricing for <span className="text-[#00A896]">every organization</span>
+              Simple, transparent pricing for <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00A896] to-[#FD6602]">every organization</span>
             </h1>
 
             <p className="text-base sm:text-lg text-slate-600 font-normal max-w-2xl mx-auto leading-relaxed">
@@ -151,7 +151,7 @@ export function PricingPage({ onNavigate }) {
 
                         {/* Items in Category */}
                         {cat.items.map((item, iIdx) => (
-                          <tr key={iIdx} className="hover:bg-teal-50/30 transition-colors border-b border-slate-100">
+                          <tr key={iIdx} className="hover:bg-[#E6F7F5]/30 transition-colors border-b border-slate-100">
                             <td className="p-4 px-5 font-bold text-slate-800 flex items-center gap-2">
                               <span>{item.name}</span>
                             </td>
@@ -170,7 +170,7 @@ export function PricingPage({ onNavigate }) {
                             </td>
 
                             {/* Growth */}
-                            <td className="p-4 text-center font-semibold text-slate-900 bg-teal-50/20">
+                            <td className="p-4 text-center font-semibold text-slate-900 bg-[#E6F7F5]/20">
                               {typeof item.growth === 'boolean' ? (
                                 item.growth ? (
                                   <Check className="w-4 h-4 text-[#00A896] mx-auto stroke-[3]" />

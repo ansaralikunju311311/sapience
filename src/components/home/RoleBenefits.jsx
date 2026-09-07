@@ -42,10 +42,15 @@ export function RoleBenefits() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {roles.map((role, idx) => {
             const Icon = role.icon
+            const isOrange = idx === 1
+            const bgClass = isOrange ? 'bg-[#FFF2E8]' : 'bg-[#E6F7F5]'
+            const textClass = isOrange ? 'text-[#FD6602]' : 'text-[#00A896]'
+            const borderClass = isOrange ? 'border-[#FD6602]/30' : 'border-[#00A896]/30'
+
             return (
               <Card key={idx} padding="p-8" className="flex flex-col justify-between space-y-6">
                 <div className="space-y-4">
-                  <div className="w-12 h-12 rounded-xl bg-teal-50 text-[#00A896] flex items-center justify-center border border-teal-100/80">
+                  <div className={`w-12 h-12 rounded-xl ${bgClass} ${textClass} flex items-center justify-center border ${borderClass}`}>
                     <Icon className="w-6 h-6" />
                   </div>
                   <h3 className="text-xl font-bold text-slate-900">{role.title}</h3>
@@ -57,7 +62,7 @@ export function RoleBenefits() {
                 <div className="pt-2">
                   <a 
                     href="#" 
-                    className="inline-flex items-center gap-2 text-xs font-bold text-[#00A896] hover:text-[#00887A] group"
+                    className={`inline-flex items-center gap-2 text-xs font-bold ${textClass} group`}
                   >
                     <span>{role.linkText}</span>
                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />

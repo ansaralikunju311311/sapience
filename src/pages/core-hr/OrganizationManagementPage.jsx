@@ -75,7 +75,7 @@ export function OrganizationManagementPage({ onNavigate }) {
               </div>
 
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-[1.15]">
-                Organization <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00A896] via-teal-300 to-emerald-400">Management System</span>
+                Organization <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00A896] via-teal-300 to-[#FD6602]">Management System</span>
               </h1>
 
               <p className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0 font-normal">
@@ -112,7 +112,7 @@ export function OrganizationManagementPage({ onNavigate }) {
                     <Network className="w-4 h-4 text-[#00A896]" />
                     <span className="text-xs font-bold text-white uppercase font-mono">Interactive Org Chart Hierarchy</span>
                   </div>
-                  <span className="text-[10px] font-bold bg-teal-500/20 text-teal-400 px-2 py-0.5 rounded-full">
+                  <span className="text-[10px] font-bold bg-[#00A896]/20 text-[#00A896] px-2 py-0.5 rounded-full">
                     Level 1 - 5 Tree
                   </span>
                 </div>
@@ -138,7 +138,7 @@ export function OrganizationManagementPage({ onNavigate }) {
           {/* FEATURE BLOCK 1: Text Left | Image Right */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6 space-y-5">
-              <div className="p-2.5 bg-teal-100 text-[#00A896] rounded-xl w-fit font-bold">
+              <div className="p-2.5 bg-[#E6F7F5] text-[#00A896] rounded-xl w-fit font-bold">
                 <GitBranch className="w-6 h-6" />
               </div>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 leading-tight">
@@ -179,7 +179,7 @@ export function OrganizationManagementPage({ onNavigate }) {
             </div>
 
             <div className="lg:col-span-6 order-1 lg:order-2 space-y-5">
-              <div className="p-2.5 bg-blue-100 text-blue-700 rounded-xl w-fit font-bold">
+              <div className="p-2.5 bg-[#FFF2E8] text-[#FD6602] rounded-xl w-fit font-bold">
                 <Sliders className="w-6 h-6" />
               </div>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 leading-tight">
@@ -222,7 +222,7 @@ export function OrganizationManagementPage({ onNavigate }) {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-4">
-              <div className="w-10 h-10 rounded-xl bg-teal-100 text-[#00A896] flex items-center justify-center font-bold">
+              <div className="w-10 h-10 rounded-xl bg-[#E6F7F5] text-[#00A896] flex items-center justify-center font-bold">
                 <Building2 className="w-5 h-5" />
               </div>
               <h3 className="text-lg font-bold text-slate-900">Multi-Entity & Subsidiaries</h3>
@@ -232,7 +232,7 @@ export function OrganizationManagementPage({ onNavigate }) {
             </div>
 
             <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-4">
-              <div className="w-10 h-10 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center font-bold">
+              <div className="w-10 h-10 rounded-xl bg-[#FFF2E8] text-[#FD6602] flex items-center justify-center font-bold">
                 <GitBranch className="w-5 h-5" />
               </div>
               <h3 className="text-lg font-bold text-slate-900">Interactive Org Trees</h3>
@@ -242,7 +242,7 @@ export function OrganizationManagementPage({ onNavigate }) {
             </div>
 
             <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-4">
-              <div className="w-10 h-10 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center font-bold">
+              <div className="w-10 h-10 rounded-xl bg-[#FFF2E8] text-[#FD6602] flex items-center justify-center font-bold">
                 <Sliders className="w-5 h-5" />
               </div>
               <h3 className="text-lg font-bold text-slate-900">Job Bands & Designations</h3>
@@ -273,7 +273,7 @@ export function OrganizationManagementPage({ onNavigate }) {
                   <div className="text-[10px] text-slate-400 uppercase">Staff Managed</div>
                 </div>
                 <div>
-                  <div className="text-base font-extrabold text-teal-400">15 Markets</div>
+                  <div className="text-base font-extrabold text-[#00A896]">15 Markets</div>
                   <div className="text-[10px] text-slate-400 uppercase">Single DB</div>
                 </div>
               </div>

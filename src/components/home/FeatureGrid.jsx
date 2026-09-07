@@ -73,19 +73,28 @@ export function FeatureGrid() {
 
         {/* 12 Feature Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, idx) => (
-            <div key={idx} className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:shadow-xl transition-all duration-200 space-y-3 border-t-4 border-t-[#00A896]">
-              <div className="flex items-center gap-2 text-[#00A896]">
-                <CheckCircle2 className="w-5 h-5 shrink-0" />
-                <h3 className="text-base font-bold text-slate-900 tracking-tight">
-                  {feature.title}
-                </h3>
+          {features.map((feature, idx) => {
+            const isOrange = idx % 2 === 1
+            const accentColor = isOrange ? '#FD6602' : '#00A896'
+
+            return (
+              <div 
+                key={idx} 
+                className={`p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:shadow-xl transition-all duration-200 space-y-3 border-t-4`}
+                style={{ borderTopColor: accentColor }}
+              >
+                <div className="flex items-center gap-2" style={{ color: accentColor }}>
+                  <CheckCircle2 className="w-5 h-5 shrink-0" />
+                  <h3 className="text-base font-bold text-slate-900 tracking-tight">
+                    {feature.title}
+                  </h3>
+                </div>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  {feature.description}
+                </p>
               </div>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                {feature.description}
-              </p>
-            </div>
-          ))}
+            )
+          })}
         </div>
 
       </div>

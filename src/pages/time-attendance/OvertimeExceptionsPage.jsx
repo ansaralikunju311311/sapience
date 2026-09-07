@@ -28,7 +28,7 @@ export function OvertimeExceptionsPage({ onNavigate }) {
               </div>
 
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-[1.15]">
-                Overtime & Attendance <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00A896] via-teal-300 to-emerald-400">Exceptions Engine</span>
+                Overtime & Attendance <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00A896] via-teal-300 to-[#FD6602]">Exceptions Engine</span>
               </h1>
 
               <p className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0 font-normal">
@@ -86,7 +86,7 @@ export function OvertimeExceptionsPage({ onNavigate }) {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-4">
-              <div className="w-10 h-10 rounded-xl bg-teal-100 text-[#00A896] flex items-center justify-center font-bold">
+              <div className="w-10 h-10 rounded-xl bg-[#E6F7F5] text-[#00A896] flex items-center justify-center font-bold">
                 <Clock className="w-5 h-5" />
               </div>
               <h3 className="text-lg font-bold text-slate-900">Late Comers & Early Departure Log</h3>
@@ -96,7 +96,7 @@ export function OvertimeExceptionsPage({ onNavigate }) {
             </div>
 
             <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-4">
-              <div className="w-10 h-10 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center font-bold">
+              <div className="w-10 h-10 rounded-xl bg-[#FFF2E8] text-[#FD6602] flex items-center justify-center font-bold">
                 <TrendingUp className="w-5 h-5" />
               </div>
               <h3 className="text-lg font-bold text-slate-900">Multi-Tier Overtime Multipliers</h3>
@@ -106,7 +106,7 @@ export function OvertimeExceptionsPage({ onNavigate }) {
             </div>
 
             <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-4">
-              <div className="w-10 h-10 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center font-bold">
+              <div className="w-10 h-10 rounded-xl bg-[#FFF2E8] text-[#FD6602] flex items-center justify-center font-bold">
                 <FileCheck className="w-5 h-5" />
               </div>
               <h3 className="text-lg font-bold text-slate-900">Supervisor Overtime Pre-Approvals</h3>

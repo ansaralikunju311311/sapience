@@ -34,8 +34,8 @@ import { SolutionDetailPage } from './pages/SolutionDetailPage'
 // Feature Detail Page Template
 import { FeatureDetailPage } from './pages/FeatureDetailPage'
 
-// Location Regional SEO Template & Data
-import { LocationSEOPage } from './pages/locations/LocationSEOPage'
+import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage'
+import { TermsOfServicePage } from './pages/TermsOfServicePage'
 
 function App() {
   const getInitialPage = () => {
@@ -47,6 +47,8 @@ function App() {
 
     if (cleanPath.includes('/pricing') || cleanHash.includes('pricing')) return 'pricing'
     if (cleanPath.includes('/customers') || cleanHash.includes('customers')) return 'customers'
+    if (cleanPath.includes('/privacypolicy') || cleanHash.includes('privacypolicy') || cleanHash.includes('privacy')) return 'privacypolicy'
+    if (cleanPath.includes('/termsofservice') || cleanHash.includes('termsofservice') || cleanHash.includes('terms')) return 'termsofservice'
     
     // Regional Location SEO Pages
     if (cleanHash.includes('hrmsuae') || cleanHash.includes('hrmsdubai') || cleanHash.includes('hrmsabudhabi') || cleanHash.includes('hrmsqatar') || cleanHash.includes('hrmssaudiarabia') || cleanHash.includes('hrmsoman') || cleanHash.includes('hrmskuwait') || cleanHash.includes('hrmsbahrain')) {
@@ -139,6 +141,10 @@ function App() {
       window.history.pushState(null, '', '#pricing')
     } else if (cleanPage === 'customers') {
       window.history.pushState(null, '', '#customers')
+    } else if (cleanPage === 'privacypolicy' || cleanPage === 'privacy') {
+      window.history.pushState(null, '', '#privacy-policy')
+    } else if (cleanPage === 'termsofservice' || cleanPage === 'terms') {
+      window.history.pushState(null, '', '#terms-of-service')
     } else if (cleanPage.startsWith('hrms')) {
       window.history.pushState(null, '', `#${cleanPage}`)
     } else if (page.startsWith('feature/')) {
@@ -166,6 +172,8 @@ function App() {
   // General Pages
   if (normPage === 'pricing') return <PricingPage onNavigate={handleNavigate} />
   if (normPage === 'customers') return <CustomersPage onNavigate={handleNavigate} />
+  if (normPage === 'privacypolicy' || normPage === 'privacy') return <PrivacyPolicyPage onNavigate={handleNavigate} />
+  if (normPage === 'termsofservice' || normPage === 'terms') return <TermsOfServicePage onNavigate={handleNavigate} />
 
   // Regional GCC Location Pages
   if (normPage.startsWith('hrms')) {

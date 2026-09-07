@@ -39,7 +39,7 @@ export function FeaturesCascadeDropdown({ isOpen, onClose, onNavigate }) {
                 onClick={() => handleCategoryClick(cat)}
                 className={`w-full flex items-center justify-between px-3.5 py-2.5 rounded-lg text-xs font-bold transition-all cursor-pointer text-left ${
                   isActive 
-                    ? 'text-[#00A896] bg-teal-50/70 font-extrabold' 
+                    ? 'text-[#00A896] bg-[#E6F7F5] font-extrabold' 
                     : 'text-slate-700 hover:text-slate-900 hover:bg-slate-50'
                 }`}
               >

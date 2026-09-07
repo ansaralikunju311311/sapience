@@ -21,7 +21,7 @@ export function HeroSection() {
             <div className="space-y-4">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.1]">
                 Streamline HR from <br className="hidden sm:inline" />
-                <span className="text-slate-900">hire to retire</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00A896] to-[#FD6602]">hire to retire</span>
               </h1>
               <p className="text-lg text-slate-600 leading-relaxed font-normal max-w-xl">
                 Sapience HCM is a new-generation human capital management platform for employee-centric organizations — records, attendance, payroll inputs, and performance in one place.
@@ -86,7 +86,7 @@ export function HeroSection() {
 
               {/* Floating Badge 2: Bottom Right - Attendance Today */}
               <div className="absolute -bottom-6 right-2 sm:-right-4 bg-slate-900 text-white p-5 rounded-2xl shadow-2xl border border-slate-800 min-w-56 space-y-1 transform hover:-translate-y-1 transition-transform">
-                <div className="flex items-center gap-2 text-xs font-medium text-[#F95738]">
+                <div className="flex items-center gap-2 text-xs font-medium text-[#FD6602]">
                   <TrendingUp className="w-4 h-4" />
                   <span>Attendance today</span>
                 </div>

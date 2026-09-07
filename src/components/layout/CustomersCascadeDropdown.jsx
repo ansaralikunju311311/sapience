@@ -64,7 +64,7 @@ export function CustomersCascadeDropdown({ isOpen, onClose, onNavigate }) {
           <p className="text-xs text-slate-500 font-medium">Trusted by leading enterprises across manufacturing, tech & services</p>
         </div>
 
-        <div className="flex items-center gap-1 bg-emerald-50 text-[#00A896] px-3 py-1 rounded-full text-xs font-bold border border-emerald-100">
+        <div className="flex items-center gap-1 bg-[#E6F7F5] text-[#00A896] px-3 py-1 rounded-full text-xs font-bold border border-[#00A896]/30">
           <Star className="w-3.5 h-3.5 fill-[#00A896]" />
           <span>4.9 / 5.0 Rating</span>
         </div>
@@ -77,7 +77,7 @@ export function CustomersCascadeDropdown({ isOpen, onClose, onNavigate }) {
             key={client.id}
             href="#customers-page"
             onClick={handleNavigateToCustomers}
-            className="group flex flex-col items-center p-2.5 rounded-xl border border-slate-100 hover:border-[#00A896]/40 hover:bg-teal-50/40 transition-all duration-150 text-center"
+            className="group flex flex-col items-center p-2.5 rounded-xl border border-slate-100 hover:border-[#00A896]/40 hover:bg-[#E6F7F5] transition-all duration-150 text-center"
           >
             <div className="h-10 w-full flex items-center justify-center mb-1">
               <img

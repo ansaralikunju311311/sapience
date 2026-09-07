@@ -150,7 +150,7 @@ export function SystemScreenshotsSection() {
   const activeImg = screenshots[selectedImage]
 
   return (
-    <section id="system-screenshots" className="py-20 bg-slate-900 text-white border-t border-slate-800">
+    <section id="system-screenshots" className="py-20 bg-[#032B26] text-white border-t border-[#0A5048]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         
         {/* Section Header */}
@@ -173,7 +173,7 @@ export function SystemScreenshotsSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           
           {/* Left List Navigator */}
-          <div className="lg:col-span-5 bg-slate-800/80 rounded-2xl border border-slate-700/70 p-3 max-h-[560px] overflow-y-auto space-y-1.5 no-scrollbar">
+          <div className="lg:col-span-5 bg-slate-900/80 rounded-2xl border border-slate-700/70 p-3 max-h-[560px] overflow-y-auto space-y-1.5 no-scrollbar">
             <div className="text-[11px] font-extrabold text-slate-400 uppercase tracking-wider px-3 py-2 border-b border-slate-700/60">
               System Screenshots ({screenshots.length}):
             </div>
@@ -185,7 +185,7 @@ export function SystemScreenshotsSection() {
                   onClick={() => setSelectedImage(idx)}
                   className={`w-full text-left p-3 rounded-xl transition-all cursor-pointer flex items-center justify-between border ${
                     isActive 
-                      ? 'bg-[#00A896] text-white border-[#00A896] shadow-md font-bold' 
+                      ? 'bg-gradient-to-r from-[#00A896] to-[#FD6602] text-white border-transparent shadow-md font-bold' 
                       : 'bg-slate-900/60 text-slate-300 hover:bg-slate-700/70 border-slate-800'
                   }`}
                 >
@@ -205,14 +205,14 @@ export function SystemScreenshotsSection() {
           <div className="lg:col-span-7 bg-slate-800/90 border border-slate-700/80 rounded-2xl p-6 shadow-2xl space-y-5">
             <div className="flex items-center justify-between border-b border-slate-700 pb-4">
               <div>
-                <span className="text-[10px] font-mono text-[#00A896] uppercase bg-teal-500/20 px-2 py-0.5 rounded font-bold">
+                <span className="text-[10px] font-mono text-[#00A896] uppercase bg-[#00A896]/20 px-2 py-0.5 rounded font-bold">
                   Doc Reference: {activeImg.page}
                 </span>
                 <h3 className="text-lg font-bold text-white mt-1">{activeImg.title}</h3>
               </div>
               <button
                 onClick={() => setFullscreenModal(true)}
-                className="text-xs font-bold text-[#00A896] hover:text-teal-300 bg-slate-900 px-3 py-1.5 rounded-lg border border-slate-700 flex items-center gap-1.5 cursor-pointer"
+                className="text-xs font-bold text-[#00A896] hover:text-[#00A896] bg-slate-900 px-3 py-1.5 rounded-lg border border-slate-700 flex items-center gap-1.5 cursor-pointer"
               >
                 <Maximize2 className="w-3.5 h-3.5" /> Fullscreen View
               </button>

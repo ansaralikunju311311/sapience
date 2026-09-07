@@ -31,11 +31,11 @@ export function Footer({ onNavigate }) {
       title: 'Company & Vendor',
       links: [
         { name: 'About Sapience HCM', route: 'home' },
-        { name: 'Cartel IT Solutions', route: 'home' },
+        { name: 'Sapience Technology LLC', route: 'home' },
         { name: 'Client Stories (150+)', route: 'customers' },
         { name: 'Contact Us', route: 'home' },
-        { name: 'Privacy Policy', route: 'home' },
-        { name: 'Terms of Service', route: 'home' }
+        { name: 'Privacy Policy', route: 'privacypolicy' },
+        { name: 'Terms of Service', route: 'termsofservice' }
       ]
     }
   ]
@@ -48,9 +48,12 @@ export function Footer({ onNavigate }) {
   }
 
   return (
-    <footer className="bg-slate-900 text-slate-300 pt-16 pb-12 border-t border-slate-800 select-none">
+    <footer className="bg-[#032B26] text-slate-300 pt-16 pb-12 border-t border-[#0A5048] select-none relative">
+      {/* Top Signature Logo Gradient Line */}
+      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#00A896] via-[#00C9B6] to-[#FD6602]" />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-12 border-b border-slate-800">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-12 border-b border-[#0A5048]">
           
           {/* Brand Info & Address */}
           <div className="lg:col-span-5 space-y-5">
@@ -66,7 +69,7 @@ export function Footer({ onNavigate }) {
               />
               <div className="flex flex-col leading-tight">
                 <span className="font-extrabold text-xl tracking-tight text-white font-sans uppercase">
-                  SAPIENCE HCM
+                  SAPIENCE <span className="text-[#FD6602]">HCM</span>
                 </span>
                 <span className="text-xs font-semibold text-[#00A896] mt-0.5">
                   Optimizing People Asset • Ver 7.0
@@ -75,13 +78,13 @@ export function Footer({ onNavigate }) {
             </a>
 
             <p className="text-xs text-slate-400 leading-relaxed max-w-md">
-              A comprehensive human capital management platform by <strong className="text-slate-200">Cartel IT Solutions</strong> to streamline global HR processes from hire to retire while helping organizations maximize workforce performance. Managing 1M+ workers across 150+ organizations in 7 countries.
+              A comprehensive human capital management platform by <strong className="text-slate-200">Sapience Technology LLC</strong> to streamline global HR processes from hire to retire while helping organizations maximize workforce performance. Managing 1M+ workers across 150+ organizations in 7 countries.
             </p>
 
             <div className="space-y-2 text-xs text-slate-300 pt-2 font-medium">
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#00A896] shrink-0 mt-0.5" />
-                <span>Office #201-025/026, 3rd Floor, Al Gaizi Plaza, Al Garhoud, PO Box 127012, Dubai, United Arab Emirates</span>
+                <span>Office #201-25/26, 3rd Floor, Al Gaizi Plaza, Nr. Mitsubishi Service Centre, Al Garhoud, PO Box 127012, Dubai, United Arab Emirates</span>
               </div>
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-[#00A896] shrink-0" />
@@ -130,11 +133,11 @@ export function Footer({ onNavigate }) {
 
         {/* Bottom copyright */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400">
-          <p>© {new Date().getFullYear()} Sapience HCM (Cartel IT Solutions LLC). All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Sapience HCM (Sapience Technology LLC). All rights reserved.</p>
           <div className="flex gap-6 mt-4 sm:mt-0 text-slate-400">
-            <a href="#home" onClick={(e) => { e.preventDefault(); if (onNavigate) onNavigate('home'); }} className="hover:text-white">Privacy Policy</a>
-            <a href="#home" onClick={(e) => { e.preventDefault(); if (onNavigate) onNavigate('home'); }} className="hover:text-white">Terms of Service</a>
-            <a href="#home" onClick={(e) => { e.preventDefault(); if (onNavigate) onNavigate('home'); }} className="hover:text-white">Security & GDPR</a>
+            <a href="#privacy-policy" onClick={(e) => { e.preventDefault(); if (onNavigate) onNavigate('privacypolicy'); }} className="hover:text-white">Privacy Policy</a>
+            <a href="#terms-of-service" onClick={(e) => { e.preventDefault(); if (onNavigate) onNavigate('termsofservice'); }} className="hover:text-white">Terms of Service</a>
+            <a href="#privacy-policy" onClick={(e) => { e.preventDefault(); if (onNavigate) onNavigate('privacypolicy'); }} className="hover:text-white">Security & GDPR</a>
           </div>
         </div>
       </div>

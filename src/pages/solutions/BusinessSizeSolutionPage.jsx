@@ -236,7 +236,7 @@ export function BusinessSizeSolutionPage({ sizeKey = 'small-business', onNavigat
                     <Icon className="w-4 h-4 text-[#00A896]" />
                     <span className="text-xs font-bold text-white uppercase font-mono">{current.badge} Official Screen</span>
                   </div>
-                  <span className="text-[10px] font-bold bg-teal-500/20 text-teal-400 px-2.5 py-0.5 rounded-full">
+                  <span className="text-[10px] font-bold bg-[#00A896]/20 text-[#00A896] px-2.5 py-0.5 rounded-full">
                     Ver 7.0 UI
                   </span>
                 </div>
@@ -273,7 +273,7 @@ export function BusinessSizeSolutionPage({ sizeKey = 'small-business', onNavigat
               <div key={idx} className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 {/* Text Side */}
                 <div className={`lg:col-span-6 space-y-5 ${isEven ? 'order-1' : 'order-1 lg:order-2'}`}>
-                  <div className="p-2.5 bg-teal-100 text-[#00A896] rounded-xl w-fit font-bold">
+                  <div className="p-2.5 bg-[#E6F7F5] text-[#00A896] rounded-xl w-fit font-bold">
                     <Zap className="w-6 h-6" />
                   </div>
                   <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 leading-tight">
@@ -394,7 +394,7 @@ export function BusinessSizeSolutionPage({ sizeKey = 'small-business', onNavigat
             <Button variant="secondary" size="lg" className="bg-white text-slate-900 hover:bg-slate-100 font-bold px-8">
               Start Free 15-Day Trial
             </Button>
-            <Button variant="secondary" size="lg" className="bg-teal-700 text-white hover:bg-teal-800 font-bold px-8 border border-teal-500">
+            <Button variant="secondary" size="lg" className="bg-[#00887A] text-white hover:bg-[#032B26] font-bold px-8 border border-[#00A896]">
               Schedule A Demo
             </Button>
           </div>

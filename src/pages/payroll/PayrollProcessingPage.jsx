@@ -31,7 +31,7 @@ export function PayrollProcessingPage({ onNavigate }) {
               </div>
 
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-[1.15]">
-                Payroll Processing <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00A896] via-teal-300 to-emerald-400">& Calculation</span>
+                Payroll Processing <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00A896] via-teal-300 to-[#FD6602]">& Calculation</span>
               </h1>
 
               <p className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0 font-normal">
@@ -56,7 +56,7 @@ export function PayrollProcessingPage({ onNavigate }) {
                     <Calculator className="w-4 h-4 text-[#00A896]" />
                     <span className="text-xs font-bold text-white uppercase font-mono">Monthly Payroll Calculation Engine</span>
                   </div>
-                  <span className="text-[10px] font-bold bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded-full">
+                  <span className="text-[10px] font-bold bg-[#00A896]/20 text-[#00A896] px-2 py-0.5 rounded-full">
                     Auto-Reconciled
                   </span>
                 </div>
@@ -89,7 +89,7 @@ export function PayrollProcessingPage({ onNavigate }) {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-4">
-              <div className="w-10 h-10 rounded-xl bg-teal-100 text-[#00A896] flex items-center justify-center font-bold">
+              <div className="w-10 h-10 rounded-xl bg-[#E6F7F5] text-[#00A896] flex items-center justify-center font-bold">
                 <RotateCcw className="w-5 h-5" />
               </div>
               <h3 className="text-lg font-bold text-slate-900">Retroactive Pay Calculations</h3>
@@ -99,7 +99,7 @@ export function PayrollProcessingPage({ onNavigate }) {
             </div>
 
             <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-4">
-              <div className="w-10 h-10 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center font-bold">
+              <div className="w-10 h-10 rounded-xl bg-[#FFF2E8] text-[#FD6602] flex items-center justify-center font-bold">
                 <Lock className="w-5 h-5" />
               </div>
               <h3 className="text-lg font-bold text-slate-900">Trial & Final Processing Locks</h3>
@@ -109,7 +109,7 @@ export function PayrollProcessingPage({ onNavigate }) {
             </div>
 
             <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-4">
-              <div className="w-10 h-10 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center font-bold">
+              <div className="w-10 h-10 rounded-xl bg-[#FFF2E8] text-[#FD6602] flex items-center justify-center font-bold">
                 <FileSpreadsheet className="w-5 h-5" />
               </div>
               <h3 className="text-lg font-bold text-slate-900">Multi-Pay Group Batches</h3>

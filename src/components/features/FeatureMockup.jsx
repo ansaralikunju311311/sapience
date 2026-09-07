@@ -34,11 +34,11 @@ export function FeatureMockup({ type = 'EMPLOYEE_DOSSIER', title = 'SAPIENCE HCM
           <div className="flex items-center gap-3">
             <div className="w-3 h-3 rounded-full bg-rose-500"></div>
             <div className="w-3 h-3 rounded-full bg-amber-500"></div>
-            <div className="w-3 h-3 rounded-full bg-emerald-500"></div>
+            <div className="w-3 h-3 rounded-full bg-[#00A896]"></div>
             <span className="font-mono text-slate-400 text-[11px] ml-2">sapience.app/recruitment/ats-pipeline</span>
           </div>
           <div className="flex items-center gap-2">
-            <span className="px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-400 text-[11px] font-semibold border border-emerald-500/20">
+            <span className="px-2.5 py-1 rounded-md bg-[#00A896]/10 text-[#00A896] text-[11px] font-semibold border border-[#00A896]/20">
               Active Vacancies: 14
             </span>
             <span className="px-2.5 py-1 rounded-md bg-[#00A896]/20 text-[#00A896] text-[11px] font-semibold">
@@ -71,12 +71,12 @@ export function FeatureMockup({ type = 'EMPLOYEE_DOSSIER', title = 'SAPIENCE HCM
           <div className="bg-slate-800/40 rounded-xl p-3 border border-slate-700/50 space-y-2.5">
             <div className="flex items-center justify-between text-slate-400 font-bold uppercase text-[10px] tracking-wider pb-1 border-b border-slate-700/40">
               <span>Applied (48)</span>
-              <span className="w-2 h-2 rounded-full bg-sky-400"></span>
+              <span className="w-2 h-2 rounded-full bg-[#00A896]"></span>
             </div>
             <div className="p-3 bg-slate-800 rounded-lg border border-slate-700 space-y-2 hover:border-[#00A896] transition-all">
               <div className="flex justify-between items-start">
                 <span className="font-bold text-white text-xs">Alexander Wright</span>
-                <span className="text-[10px] bg-sky-500/10 text-sky-400 px-1.5 py-0.5 rounded font-mono">94% Match</span>
+                <span className="text-[10px] bg-[#00A896]/10 text-[#00A896] px-1.5 py-0.5 rounded font-mono">94% Match</span>
               </div>
               <p className="text-[11px] text-slate-400">Senior React & Node Developer • 8 yrs</p>
               <div className="flex items-center justify-between text-[10px] text-slate-500 pt-1 border-t border-slate-700/50">
@@ -87,7 +87,7 @@ export function FeatureMockup({ type = 'EMPLOYEE_DOSSIER', title = 'SAPIENCE HCM
             <div className="p-3 bg-slate-800 rounded-lg border border-slate-700 space-y-2">
               <div className="flex justify-between items-start">
                 <span className="font-bold text-white text-xs">Sophia Martinez</span>
-                <span className="text-[10px] bg-sky-500/10 text-sky-400 px-1.5 py-0.5 rounded font-mono">88% Match</span>
+                <span className="text-[10px] bg-[#00A896]/10 text-[#00A896] px-1.5 py-0.5 rounded font-mono">88% Match</span>
               </div>
               <p className="text-[11px] text-slate-400">Full Stack Engineer • 6 yrs</p>
             </div>
@@ -105,7 +105,7 @@ export function FeatureMockup({ type = 'EMPLOYEE_DOSSIER', title = 'SAPIENCE HCM
                 <span className="text-[10px] bg-amber-500/20 text-amber-400 px-1.5 py-0.5 rounded font-bold">Tech Score: 4.8★</span>
               </div>
               <p className="text-[11px] text-slate-400">System Architect • Today 4:00 PM</p>
-              <div className="flex items-center justify-between text-[10px] text-emerald-400 pt-1 border-t border-slate-700/50">
+              <div className="flex items-center justify-between text-[10px] text-[#00A896] pt-1 border-t border-slate-700/50">
                 <span>Scorecard Submitted</span>
                 <span>Zoom Sync</span>
               </div>
@@ -116,17 +116,17 @@ export function FeatureMockup({ type = 'EMPLOYEE_DOSSIER', title = 'SAPIENCE HCM
           <div className="bg-slate-800/40 rounded-xl p-3 border border-slate-700/50 space-y-2.5">
             <div className="flex items-center justify-between text-slate-400 font-bold uppercase text-[10px] tracking-wider pb-1 border-b border-slate-700/40">
               <span>Offer (4)</span>
-              <span className="w-2 h-2 rounded-full bg-purple-400"></span>
+              <span className="w-2 h-2 rounded-full bg-[#FD6602]"></span>
             </div>
-            <div className="p-3 bg-slate-800 rounded-lg border border-purple-500/40 space-y-2">
+            <div className="p-3 bg-slate-800 rounded-lg border border-[#FD6602]/40 space-y-2">
               <div className="flex justify-between items-start">
                 <span className="font-bold text-white text-xs">Elena Rostova</span>
-                <span className="text-[10px] bg-purple-500/20 text-purple-300 px-1.5 py-0.5 rounded">E-Signed</span>
+                <span className="text-[10px] bg-[#FD6602]/20 text-[#FD6602] px-1.5 py-0.5 rounded font-bold">E-Signed</span>
               </div>
               <p className="text-[11px] text-slate-300 font-semibold">AED 28,000 / mo + Benefits</p>
-              <div className="flex items-center justify-between text-[10px] text-purple-300 pt-1 border-t border-slate-700/50">
+              <div className="flex items-center justify-between text-[10px] text-[#FD6602] pt-1 border-t border-slate-700/50">
                 <span>Starts Oct 1st</span>
-                <span className="text-emerald-400 font-bold">Accepted ✓</span>
+                <span className="text-[#00A896] font-bold">Accepted ✓</span>
               </div>
             </div>
           </div>
@@ -135,16 +135,16 @@ export function FeatureMockup({ type = 'EMPLOYEE_DOSSIER', title = 'SAPIENCE HCM
           <div className="bg-slate-800/40 rounded-xl p-3 border border-slate-700/50 space-y-2.5">
             <div className="flex items-center justify-between text-slate-400 font-bold uppercase text-[10px] tracking-wider pb-1 border-b border-slate-700/40">
               <span>Onboarding (6)</span>
-              <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
+              <span className="w-2 h-2 rounded-full bg-[#00A896]"></span>
             </div>
-            <div className="p-3 bg-slate-800 rounded-lg border border-emerald-500/40 space-y-2">
+            <div className="p-3 bg-slate-800 rounded-lg border border-[#00A896]/40 space-y-2">
               <div className="flex justify-between items-start">
                 <span className="font-bold text-white text-xs">Tariq Mansoor</span>
-                <span className="text-[10px] bg-emerald-500/20 text-emerald-300 px-1.5 py-0.5 rounded">Day 1 Ready</span>
+                <span className="text-[10px] bg-[#00A896]/20 text-[#00A896] px-1.5 py-0.5 rounded">Day 1 Ready</span>
               </div>
               <p className="text-[11px] text-slate-400">Pre-boarding forms 100% complete</p>
               <div className="w-full bg-slate-700 h-1.5 rounded-full overflow-hidden mt-1">
-                <div className="bg-emerald-400 h-full w-full"></div>
+                <div className="bg-[#00A896] h-full w-full"></div>
               </div>
             </div>
           </div>
@@ -163,10 +163,10 @@ export function FeatureMockup({ type = 'EMPLOYEE_DOSSIER', title = 'SAPIENCE HCM
           <div className="flex items-center gap-3">
             <div className="w-3 h-3 rounded-full bg-rose-500"></div>
             <div className="w-3 h-3 rounded-full bg-amber-500"></div>
-            <div className="w-3 h-3 rounded-full bg-emerald-500"></div>
+            <div className="w-3 h-3 rounded-full bg-[#00A896]"></div>
             <span className="font-mono text-slate-400 text-[11px] ml-2">sapience.app/workforce/live-attendance-matrix</span>
           </div>
-          <div className="flex items-center gap-2 text-emerald-400 text-[11px] font-semibold bg-emerald-500/10 px-3 py-1 rounded-md border border-emerald-500/20">
+          <div className="flex items-center gap-2 text-[#00A896] text-[11px] font-semibold bg-[#00A896]/10 px-3 py-1 rounded-md border border-[#00A896]/20">
             <Zap className="w-3.5 h-3.5" />
             <span>ZKTeco / Suprema Hardware Sync Live</span>
           </div>
@@ -178,17 +178,17 @@ export function FeatureMockup({ type = 'EMPLOYEE_DOSSIER', title = 'SAPIENCE HCM
             <span className="text-[10px] text-slate-400 uppercase font-bold">Total Scheduled</span>
             <p className="text-xl font-extrabold text-white">1,240</p>
           </div>
-          <div className="p-3 bg-emerald-950/40 rounded-xl border border-emerald-500/30">
-            <span className="text-[10px] text-emerald-400 uppercase font-bold">Present Now</span>
-            <p className="text-xl font-extrabold text-emerald-400">1,186 (95.6%)</p>
+          <div className="p-3 bg-[#032B26]/80 rounded-xl border border-[#00A896]/30">
+            <span className="text-[10px] text-[#00A896] uppercase font-bold">Present Now</span>
+            <p className="text-xl font-extrabold text-[#00A896]">1,186 (95.6%)</p>
           </div>
           <div className="p-3 bg-amber-950/40 rounded-xl border border-amber-500/30">
             <span className="text-[10px] text-amber-400 uppercase font-bold">Late Arrivals</span>
             <p className="text-xl font-extrabold text-amber-400">18 Staff</p>
           </div>
-          <div className="p-3 bg-sky-950/40 rounded-xl border border-sky-500/30">
-            <span className="text-[10px] text-sky-400 uppercase font-bold">On Leave</span>
-            <p className="text-xl font-extrabold text-sky-400">36 Approved</p>
+          <div className="p-3 bg-[#032B26]/80 rounded-xl border border-[#00A896]/30">
+            <span className="text-[10px] text-[#00A896] uppercase font-bold">On Leave</span>
+            <p className="text-xl font-extrabold text-[#00A896]">36 Approved</p>
           </div>
         </div>
 
@@ -213,12 +213,12 @@ export function FeatureMockup({ type = 'EMPLOYEE_DOSSIER', title = 'SAPIENCE HCM
                 </td>
                 <td className="p-3">Engineering</td>
                 <td className="p-3 font-mono text-slate-400">Morning (08:00 - 17:00)</td>
-                <td className="p-3 font-mono text-emerald-400 font-bold">07:54 AM</td>
+                <td className="p-3 font-mono text-[#00A896] font-bold">07:54 AM</td>
                 <td className="p-3 text-slate-400 flex items-center gap-1">
                   <Building2 className="w-3 h-3 text-[#00A896]" /> Gate 1 Biometric Terminal
                 </td>
                 <td className="p-3 text-right">
-                  <span className="px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 font-bold border border-emerald-500/30">On Time</span>
+                  <span className="px-2 py-0.5 rounded-full bg-[#00A896]/10 text-[#00A896] font-bold border border-[#00A896]/30">On Time</span>
                 </td>
               </tr>
               <tr className="hover:bg-slate-800/40">
@@ -238,15 +238,15 @@ export function FeatureMockup({ type = 'EMPLOYEE_DOSSIER', title = 'SAPIENCE HCM
               </tr>
               <tr className="hover:bg-slate-800/40">
                 <td className="p-3 font-bold text-white flex items-center gap-2">
-                  <div className="w-6 h-6 rounded-full bg-sky-500/30 text-sky-400 font-bold flex items-center justify-center text-[10px]">RK</div>
+                  <div className="w-6 h-6 rounded-full bg-[#00A896]/30 text-[#00A896] font-bold flex items-center justify-center text-[10px]">RK</div>
                   Rajesh Kumar
                 </td>
                 <td className="p-3">Logistics</td>
                 <td className="p-3 font-mono text-slate-400">Night Shift (22:00 - 06:00)</td>
-                <td className="p-3 font-mono text-sky-400 font-bold">Annual Leave</td>
+                <td className="p-3 font-mono text-[#00A896] font-bold">Annual Leave</td>
                 <td className="p-3 text-slate-400">ESS System Approval</td>
                 <td className="p-3 text-right">
-                  <span className="px-2 py-0.5 rounded-full bg-sky-500/10 text-sky-400 font-bold border border-sky-500/30">Paid PTO</span>
+                  <span className="px-2 py-0.5 rounded-full bg-[#00A896]/10 text-[#00A896] font-bold border border-[#00A896]/30">Paid PTO</span>
                 </td>
               </tr>
             </tbody>
@@ -265,14 +265,14 @@ export function FeatureMockup({ type = 'EMPLOYEE_DOSSIER', title = 'SAPIENCE HCM
           <div className="flex items-center gap-3">
             <div className="w-3 h-3 rounded-full bg-rose-500"></div>
             <div className="w-3 h-3 rounded-full bg-amber-500"></div>
-            <div className="w-3 h-3 rounded-full bg-emerald-500"></div>
+            <div className="w-3 h-3 rounded-full bg-[#00A896]"></div>
             <span className="font-mono text-slate-400 text-[11px] ml-2">sapience.app/payroll/gross-to-net-calculator</span>
           </div>
           <div className="flex items-center gap-2">
             <span className="px-3 py-1 bg-amber-500/20 text-amber-400 rounded-md font-bold text-[11px]">
               UAE MOHRE WPS SIF Ready
             </span>
-            <span className="px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-md font-bold text-[11px]">
+            <span className="px-3 py-1 bg-[#00A896]/20 text-[#00A896] rounded-md font-bold text-[11px]">
               Payroll Locked & Verified
             </span>
           </div>
@@ -298,8 +298,8 @@ export function FeatureMockup({ type = 'EMPLOYEE_DOSSIER', title = 'SAPIENCE HCM
                 <span className="text-white font-bold">AED 6,240,000.00</span>
               </div>
               <div className="flex justify-between p-2 rounded bg-slate-800/80">
-                <span className="text-emerald-400">Overtime & Night Shifts (Approved)</span>
-                <span className="text-emerald-400 font-bold">+ AED 428,500.00</span>
+                <span className="text-[#00A896]">Overtime & Night Shifts (Approved)</span>
+                <span className="text-[#00A896] font-bold">+ AED 428,500.00</span>
               </div>
               <div className="flex justify-between p-2 rounded bg-slate-800/80">
                 <span className="text-rose-400">GOSI / Pension & Loan EMI Recovery</span>
@@ -322,7 +322,7 @@ export function FeatureMockup({ type = 'EMPLOYEE_DOSSIER', title = 'SAPIENCE HCM
             <div className="p-3 bg-white text-slate-900 rounded-lg space-y-2 text-[10px] leading-snug shadow-inner">
               <div className="flex justify-between border-b pb-1">
                 <span className="font-extrabold text-slate-900 uppercase">SAPIENCE HCM</span>
-                <span className="font-bold text-teal-700">CONFIDENTIAL</span>
+                <span className="font-bold text-[#00A896]">CONFIDENTIAL</span>
               </div>
               <div className="space-y-0.5 text-[9px] text-slate-600">
                 <p><strong>Employee:</strong> Tariq Al-Hashimi (EMP-10842)</p>
@@ -334,7 +334,7 @@ export function FeatureMockup({ type = 'EMPLOYEE_DOSSIER', title = 'SAPIENCE HCM
                 <div className="flex justify-between"><span>Housing Allowance:</span><span>AED 6,000.00</span></div>
                 <div className="flex justify-between"><span>Overtime Pay:</span><span>AED 1,250.00</span></div>
                 <div className="flex justify-between text-rose-600"><span>Loan EMI:</span><span>- AED 500.00</span></div>
-                <div className="flex justify-between font-extrabold text-teal-800 border-t pt-0.5 mt-0.5 text-[10px]">
+                <div className="flex justify-between font-extrabold text-[#00A896] border-t pt-0.5 mt-0.5 text-[10px]">
                   <span>NET PAY:</span><span>AED 20,750.00</span>
                 </div>
               </div>
@@ -359,10 +359,10 @@ export function FeatureMockup({ type = 'EMPLOYEE_DOSSIER', title = 'SAPIENCE HCM
           <div className="flex items-center gap-3">
             <div className="w-3 h-3 rounded-full bg-rose-500"></div>
             <div className="w-3 h-3 rounded-full bg-amber-500"></div>
-            <div className="w-3 h-3 rounded-full bg-emerald-500"></div>
+            <div className="w-3 h-3 rounded-full bg-[#00A896]"></div>
             <span className="font-mono text-slate-400 text-[11px] ml-2">sapience.app/analytics/executive-dashboard</span>
           </div>
-          <div className="flex items-center gap-2 text-sky-400 text-[11px] font-semibold bg-sky-500/10 px-3 py-1 rounded-md border border-sky-500/20">
+          <div className="flex items-center gap-2 text-[#00A896] text-[11px] font-semibold bg-[#00A896]/10 px-3 py-1 rounded-md border border-[#00A896]/20">
             <TrendingUp className="w-3.5 h-3.5" />
             <span>C-Suite Real-Time BI Intelligence</span>
           </div>
@@ -376,15 +376,15 @@ export function FeatureMockup({ type = 'EMPLOYEE_DOSSIER', title = 'SAPIENCE HCM
               <Users className="w-4 h-4 text-[#00A896]" />
             </div>
             <p className="text-2xl font-extrabold text-white">2,840</p>
-            <span className="text-[10px] text-emerald-400 font-bold">+12% vs last quarter</span>
+            <span className="text-[10px] text-[#00A896] font-bold">+12% vs last quarter</span>
           </div>
           <div className="p-3.5 bg-slate-800/80 rounded-xl border border-slate-700/80 space-y-1">
             <div className="flex justify-between items-center text-slate-400 text-[10px] font-bold uppercase">
               <span>Monthly Attrition Rate</span>
-              <TrendingUp className="w-4 h-4 text-emerald-400" />
+              <TrendingUp className="w-4 h-4 text-[#00A896]" />
             </div>
             <p className="text-2xl font-extrabold text-white">1.8%</p>
-            <span className="text-[10px] text-emerald-400 font-bold">-0.5% below target</span>
+            <span className="text-[10px] text-[#00A896] font-bold">-0.5% below target</span>
           </div>
           <div className="p-3.5 bg-slate-800/80 rounded-xl border border-slate-700/80 space-y-1">
             <div className="flex justify-between items-center text-slate-400 text-[10px] font-bold uppercase">
@@ -397,10 +397,10 @@ export function FeatureMockup({ type = 'EMPLOYEE_DOSSIER', title = 'SAPIENCE HCM
           <div className="p-3.5 bg-slate-800/80 rounded-xl border border-slate-700/80 space-y-1">
             <div className="flex justify-between items-center text-slate-400 text-[10px] font-bold uppercase">
               <span>Time-to-Hire Avg</span>
-              <Clock className="w-4 h-4 text-sky-400" />
+              <Clock className="w-4 h-4 text-[#00A896]" />
             </div>
             <p className="text-2xl font-extrabold text-white">18.4 Days</p>
-            <span className="text-[10px] text-emerald-400 font-bold">45% faster than benchmark</span>
+            <span className="text-[10px] text-[#00A896] font-bold">45% faster than benchmark</span>
           </div>
         </div>
 
@@ -417,7 +417,7 @@ export function FeatureMockup({ type = 'EMPLOYEE_DOSSIER', title = 'SAPIENCE HCM
                 <div key={i} className="flex-1 flex flex-col items-center gap-1 group">
                   <div 
                     style={{ height: `${h}px` }} 
-                    className="w-full bg-gradient-to-t from-[#00A896] to-cyan-400 rounded-t group-hover:from-emerald-400 group-hover:to-teal-300 transition-all"
+                    className="w-full bg-gradient-to-t from-[#00A896] to-[#FD6602] rounded-t group-hover:from-[#00887A] group-hover:to-[#E05300] transition-all"
                   ></div>
                   <span className="text-[9px] text-slate-400 font-mono">M{i+1}</span>
                 </div>
@@ -442,19 +442,19 @@ export function FeatureMockup({ type = 'EMPLOYEE_DOSSIER', title = 'SAPIENCE HCM
               <div>
                 <div className="flex justify-between text-[11px] mb-1">
                   <span>Asia Pacific Hubs</span>
-                  <span className="font-bold text-sky-400">26%</span>
+                  <span className="font-bold text-[#00A896]">26%</span>
                 </div>
                 <div className="w-full bg-slate-700 h-2 rounded-full overflow-hidden">
-                  <div className="bg-sky-400 h-full w-[26%]"></div>
+                  <div className="bg-[#00A896] h-full w-[26%]"></div>
                 </div>
               </div>
               <div>
                 <div className="flex justify-between text-[11px] mb-1">
                   <span>Europe & Americas</span>
-                  <span className="font-bold text-purple-400">16%</span>
+                  <span className="font-bold text-[#FD6602]">16%</span>
                 </div>
                 <div className="w-full bg-slate-700 h-2 rounded-full overflow-hidden">
-                  <div className="bg-purple-400 h-full w-[16%]"></div>
+                  <div className="bg-[#FD6602] h-full w-[16%]"></div>
                 </div>
               </div>
             </div>
@@ -473,10 +473,10 @@ export function FeatureMockup({ type = 'EMPLOYEE_DOSSIER', title = 'SAPIENCE HCM
           <div className="flex items-center gap-3">
             <div className="w-3 h-3 rounded-full bg-rose-500"></div>
             <div className="w-3 h-3 rounded-full bg-amber-500"></div>
-            <div className="w-3 h-3 rounded-full bg-emerald-500"></div>
+            <div className="w-3 h-3 rounded-full bg-[#00A896]"></div>
             <span className="font-mono text-slate-400 text-[11px] ml-2">sapience.app/platform/workflow-builder-canvas</span>
           </div>
-          <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-md font-bold text-[11px]">
+          <span className="px-3 py-1 bg-[#FD6602]/20 text-[#FD6602] rounded-md font-bold text-[11px]">
             No-Code Automation Builder
           </span>
         </div>
@@ -486,8 +486,8 @@ export function FeatureMockup({ type = 'EMPLOYEE_DOSSIER', title = 'SAPIENCE HCM
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 relative z-10">
             
             {/* Step 1 */}
-            <div className="p-3 bg-slate-800 rounded-xl border border-sky-500/50 w-48 text-center space-y-1 shadow-lg">
-              <span className="text-[9px] bg-sky-500/20 text-sky-400 px-2 py-0.5 rounded font-bold uppercase">Trigger Event</span>
+            <div className="p-3 bg-slate-800 rounded-xl border border-[#00A896]/50 w-48 text-center space-y-1 shadow-lg">
+              <span className="text-[9px] bg-[#00A896]/20 text-[#00A896] px-2 py-0.5 rounded font-bold uppercase">Trigger Event</span>
               <p className="font-bold text-white text-xs">Expense Claim &gt; AED 5,000</p>
               <p className="text-[10px] text-slate-400">Employee submits claim</p>
             </div>
@@ -504,10 +504,10 @@ export function FeatureMockup({ type = 'EMPLOYEE_DOSSIER', title = 'SAPIENCE HCM
             <ChevronRight className="w-5 h-5 text-slate-600 rotate-90 md:rotate-0" />
 
             {/* Step 3 */}
-            <div className="p-3 bg-slate-800 rounded-xl border border-emerald-500/50 w-48 text-center space-y-1 shadow-lg">
-              <span className="text-[9px] bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded font-bold uppercase">Automated Action</span>
+            <div className="p-3 bg-slate-800 rounded-xl border border-[#00A896]/50 w-48 text-center space-y-1 shadow-lg">
+              <span className="text-[9px] bg-[#00A896]/20 text-[#00A896] px-2 py-0.5 rounded font-bold uppercase">Automated Action</span>
               <p className="font-bold text-white text-xs">Push to Payroll Payout</p>
-              <p className="text-[10px] text-emerald-400">Include in next WPS file</p>
+              <p className="text-[10px] text-[#00A896]">Include in next WPS file</p>
             </div>
 
           </div>
@@ -523,7 +523,7 @@ export function FeatureMockup({ type = 'EMPLOYEE_DOSSIER', title = 'SAPIENCE HCM
         <div className="flex items-center gap-3">
           <div className="w-3 h-3 rounded-full bg-rose-500"></div>
           <div className="w-3 h-3 rounded-full bg-amber-500"></div>
-          <div className="w-3 h-3 rounded-full bg-emerald-500"></div>
+          <div className="w-3 h-3 rounded-full bg-[#00A896]"></div>
           <span className="font-mono text-slate-400 text-[11px] ml-2">sapience.app/core-hr/master-employee-dossier</span>
         </div>
         <div className="flex items-center gap-2 text-[#00A896] text-[11px] font-semibold bg-[#00A896]/10 px-3 py-1 rounded-md border border-[#00A896]/20">
@@ -535,7 +535,7 @@ export function FeatureMockup({ type = 'EMPLOYEE_DOSSIER', title = 'SAPIENCE HCM
       <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
         {/* Profile Card */}
         <div className="md:col-span-4 bg-slate-800/80 p-4 rounded-xl border border-slate-700/80 space-y-3 text-center">
-          <div className="w-16 h-16 rounded-full bg-gradient-to-tr from-[#00A896] to-cyan-400 text-white font-extrabold text-xl flex items-center justify-center mx-auto shadow-md">
+          <div className="w-16 h-16 rounded-full bg-gradient-to-tr from-[#00A896] to-[#FD6602] text-white font-extrabold text-xl flex items-center justify-center mx-auto shadow-md">
             ZA
           </div>
           <div>
@@ -545,7 +545,7 @@ export function FeatureMockup({ type = 'EMPLOYEE_DOSSIER', title = 'SAPIENCE HCM
           <div className="pt-2 border-t border-slate-700/60 space-y-1 text-[11px] text-left text-slate-300">
             <p className="flex justify-between"><span>Employee ID:</span><strong className="text-white font-mono">EMP-0042</strong></p>
             <p className="flex justify-between"><span>Location:</span><strong className="text-white">Dubai, UAE</strong></p>
-            <p className="flex justify-between"><span>Visa Expiry:</span><strong className="text-emerald-400 font-mono">14 Nov 2028 (Valid)</strong></p>
+            <p className="flex justify-between"><span>Visa Expiry:</span><strong className="text-[#00A896] font-mono">14 Nov 2028 (Valid)</strong></p>
           </div>
         </div>
 
@@ -572,7 +572,7 @@ export function FeatureMockup({ type = 'EMPLOYEE_DOSSIER', title = 'SAPIENCE HCM
             </div>
             <div className="p-2.5 bg-slate-800 rounded-lg">
               <span className="text-[10px] text-slate-400 block font-sans">Probation Status</span>
-              <strong className="text-emerald-400">Confirmed (100%)</strong>
+              <strong className="text-[#00A896]">Confirmed (100%)</strong>
             </div>
           </div>
         </div>

@@ -91,9 +91,9 @@ export function LocationSEOPage({ locationSlug, onNavigate }) {
               {locData.description}
             </p>
 
-            <div className="flex flex-wrap items-center justify-center gap-2 pt-1 text-xs text-emerald-400 font-bold">
+            <div className="flex flex-wrap items-center justify-center gap-2 pt-1 text-xs text-[#00A896] font-bold">
               {locData.keywords.map((kw, idx) => (
-                <span key={idx} className="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20">
+                <span key={idx} className="px-3 py-1 rounded-full bg-[#00A896]/10 border border-[#00A896]/20">
                   #{kw}
                 </span>
               ))}
@@ -203,7 +203,7 @@ export function LocationSEOPage({ locationSlug, onNavigate }) {
               <button
                 key={idx}
                 onClick={() => handleLocationClick(loc.slug)}
-                className="p-3.5 rounded-xl bg-white border border-slate-200 hover:border-[#00A896] hover:bg-teal-50/50 transition-all text-left group cursor-pointer space-y-1"
+                className="p-3.5 rounded-xl bg-white border border-slate-200 hover:border-[#00A896] hover:bg-[#E6F7F5] transition-all text-left group cursor-pointer space-y-1"
               >
                 <span className="text-xs font-bold text-slate-900 group-hover:text-[#00A896] flex items-center justify-between">
                   {loc.locationName}
@@ -252,7 +252,7 @@ export function LocationSEOPage({ locationSlug, onNavigate }) {
       )}
 
       {/* 8. FINAL CTA BANNER */}
-      <section className="py-16 bg-gradient-to-r from-slate-900 via-[#004d40] to-slate-900 text-white text-center">
+      <section className="py-16 bg-gradient-to-r from-slate-950 via-[#032B26] to-slate-950 text-white text-center border-t border-[#00A896]/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
             Elevate HR operations in {locData.locationName}

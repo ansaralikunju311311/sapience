@@ -60,7 +60,7 @@ export function AiSection() {
                     <p className="text-[10px] text-slate-400">Connected to live HR records</p>
                   </div>
                 </div>
-                <span className="px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                <span className="px-2 py-0.5 rounded text-[10px] font-mono bg-[#00A896]/10 text-[#00A896] border border-[#00A896]/20">
                   Active
                 </span>
               </div>
@@ -93,7 +93,7 @@ export function AiSection() {
                       </div>
                       <div className="bg-slate-900/60 p-2 rounded-lg">
                         <span className="text-slate-400 text-[10px]">On Target</span>
-                        <p className="font-extrabold text-[#F95738] text-sm">62% (26)</p>
+                        <p className="font-extrabold text-[#FD6602] text-sm">62% (26)</p>
                       </div>
                     </div>
 
