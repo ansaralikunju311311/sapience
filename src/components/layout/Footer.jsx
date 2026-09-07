@@ -33,7 +33,7 @@ export function Footer({ onNavigate }) {
         { name: 'About Sapience HCM', route: 'about' },
         { name: 'Sapience Technology LLC', route: 'about' },
         { name: 'Client Stories (150+)', route: 'customers' },
-        { name: 'Contact Us', route: 'home' },
+        { name: 'Contact Us', route: 'contact' },
         { name: 'Privacy Policy', route: 'privacypolicy' },
         { name: 'Terms of Service', route: 'termsofservice' }
       ]

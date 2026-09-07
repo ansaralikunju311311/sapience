@@ -43,6 +43,14 @@ export const seoKeywordMap = {
     title: 'About Us | Sapience Technology LLC & Sapience HCM',
     description: 'Sapience Technology LLC is a professionally managed global IT solution provider and leading HRMS vendor servicing enterprise clients across UAE, GCC, and worldwide.'
   },
+  'contact': {
+    primaryKeyword: 'Contact Sapience Technology LLC UAE',
+    secondaryKeywords: ['HRMS software enquiry Dubai', 'Submit HR enquiry UAE', 'WPS payroll consultation GCC'],
+    intent: 'Transactional / Contact',
+    targetLocation: 'UAE & GCC',
+    title: 'Contact Us & Online Enquiry | Sapience Technology LLC',
+    description: 'Get in touch with Sapience Technology LLC in Dubai, UAE. Submit your online inquiry for HRMS, WPS Payroll, ERP, CRM, and custom IT solutions.'
+  },
 
   // Regional GCC Location Pages
   'hrmsuae': {

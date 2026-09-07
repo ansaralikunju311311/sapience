@@ -37,6 +37,7 @@ import { FeatureDetailPage } from './pages/FeatureDetailPage'
 import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage'
 import { TermsOfServicePage } from './pages/TermsOfServicePage'
 import { AboutUsPage } from './pages/AboutUsPage'
+import { ContactUsPage } from './pages/ContactUsPage'
 
 function App() {
   const getInitialPage = () => {
@@ -46,6 +47,7 @@ function App() {
     const cleanPath = rawPath.replace(/-/g, '')
     const cleanHash = rawHash.replace(/-/g, '')
 
+    if (cleanPath.includes('/contact') || cleanHash.includes('contact')) return 'contact'
     if (cleanPath.includes('/about') || cleanHash.includes('about')) return 'aboutus'
     if (cleanPath.includes('/pricing') || cleanHash.includes('pricing')) return 'pricing'
     if (cleanPath.includes('/customers') || cleanHash.includes('customers')) return 'customers'
@@ -139,7 +141,9 @@ function App() {
 
     const cleanPage = page.replace(/-/g, '')
 
-    if (cleanPage === 'aboutus' || cleanPage === 'about') {
+    if (cleanPage === 'contact' || cleanPage === 'contactus') {
+      window.history.pushState(null, '', '#contact-us')
+    } else if (cleanPage === 'aboutus' || cleanPage === 'about') {
       window.history.pushState(null, '', '#about-us')
     } else if (cleanPage === 'pricing') {
       window.history.pushState(null, '', '#pricing')
@@ -174,6 +178,7 @@ function App() {
   const normPage = currentPage.replace(/-/g, '')
 
   // General Pages
+  if (normPage === 'contact' || normPage === 'contactus') return <ContactUsPage onNavigate={handleNavigate} />
   if (normPage === 'aboutus' || normPage === 'about') return <AboutUsPage onNavigate={handleNavigate} />
   if (normPage === 'pricing') return <PricingPage onNavigate={handleNavigate} />
   if (normPage === 'customers') return <CustomersPage onNavigate={handleNavigate} />
