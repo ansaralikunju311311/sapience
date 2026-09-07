@@ -30,8 +30,8 @@ export function Footer({ onNavigate }) {
     {
       title: 'Company & Vendor',
       links: [
-        { name: 'About Sapience HCM', route: 'home' },
-        { name: 'Sapience Technology LLC', route: 'home' },
+        { name: 'About Sapience HCM', route: 'about' },
+        { name: 'Sapience Technology LLC', route: 'about' },
         { name: 'Client Stories (150+)', route: 'customers' },
         { name: 'Contact Us', route: 'home' },
         { name: 'Privacy Policy', route: 'privacypolicy' },

@@ -35,6 +35,14 @@ export const seoKeywordMap = {
     title: 'HRMS Software Client Stories & Case Studies UAE | SAPIENCE HCM',
     description: 'See how 150+ leading enterprises across 7 GCC countries streamline HR & WPS payroll with Sapience HCM software.'
   },
+  'about': {
+    primaryKeyword: 'Sapience Technology LLC About Us',
+    secondaryKeywords: ['IT solution provider Dubai', 'HRMS vendor UAE', 'Enterprise ERP HR software GCC'],
+    intent: 'Informational / Corporate Profile',
+    targetLocation: 'UAE & Global',
+    title: 'About Us | Sapience Technology LLC & Sapience HCM',
+    description: 'Sapience Technology LLC is a professionally managed global IT solution provider and leading HRMS vendor servicing enterprise clients across UAE, GCC, and worldwide.'
+  },
 
   // Regional GCC Location Pages
   'hrmsuae': {

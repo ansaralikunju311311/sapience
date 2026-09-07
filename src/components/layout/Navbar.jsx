@@ -22,6 +22,7 @@ export function Navbar({ onNavigate }) {
     { label: 'Solutions', hasDropdown: true, key: 'solutions' },
     { label: 'Pricing', hasDropdown: false, key: 'pricing' },
     { label: 'Customers', hasDropdown: true, key: 'customers' },
+    { label: 'About Us', hasDropdown: false, key: 'about' },
   ]
 
   const handleNavClick = (key) => {
@@ -43,6 +44,11 @@ export function Navbar({ onNavigate }) {
       setFeaturesOpen(false)
       setSolutionsOpen(false)
       if (onNavigate) onNavigate('customers')
+    } else if (key === 'about') {
+      setCustomersOpen(false)
+      setFeaturesOpen(false)
+      setSolutionsOpen(false)
+      if (onNavigate) onNavigate('about')
     }
   }
 
@@ -336,6 +342,17 @@ export function Navbar({ onNavigate }) {
                 className="w-full flex items-center justify-between text-base font-bold text-slate-800 py-1"
               >
                 <span>Customers</span>
+                <ChevronRight className="w-4 h-4 text-slate-400" />
+              </button>
+            </div>
+
+            {/* 5. About Us */}
+            <div className="border-b border-slate-100 py-2">
+              <button
+                onClick={() => handleMobileLinkClick('about')}
+                className="w-full flex items-center justify-between text-base font-bold text-slate-800 py-1"
+              >
+                <span>About Us</span>
                 <ChevronRight className="w-4 h-4 text-slate-400" />
               </button>
             </div>
